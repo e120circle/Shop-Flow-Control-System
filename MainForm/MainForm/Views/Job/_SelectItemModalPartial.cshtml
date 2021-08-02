@@ -1,0 +1,165 @@
+﻿@using SQLClass.Models.Item
+@using ReflectionIT.Mvc.Paging
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@addTagHelper *, ReflectionIT.Mvc.Paging
+@model MainForm.ViewModels.Job.JobViewModel
+
+@inject IViewLocalizer localizer
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+<div class="col-12" style="margin-top:5px;">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding-left:0;">
+        @await this.Component.InvokeAsync("Pager", new { pagingList = this.Model.ItemListInPaging })
+    </div>
+    <form method="post" id="ItemSearchForm" class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="align-self: flex-end;text-align: right;">
+        <div class="row" style="overflow:auto;">
+            <input name="Item_no_filter" id="ItemNo_filter" class="form-control col-sm-12 col-md-3 col-lg-3 col-xl-3 ui-autocomplete-input" placeholder="@localizer["search_Item_no"]"
+                   value="@Model.ItemListInPaging.RouteValue["Item_no_filter"]" style="margin-left:5px;margin-right:5px;width:100%;" />
+            <input name="Item_name_filter" class="form-control col-sm-12 col-md-3 col-lg-3 col-xl-3" placeholder="@localizer["search_Item_name"]"
+                   value="@Model.ItemListInPaging.RouteValue["Item_name_filter"]" style="margin-left:5px;margin-right:5px;width:100%;" />
+            <input name="Item_description_filter" class="form-control col-sm-12 col-md-3 col-lg-3 col-xl-3" placeholder="@localizer["search_Item_description"]"
+                   value="@Model.ItemListInPaging.RouteValue["Item_description_filter"]" style="margin-left:5px;margin-right:5px;width:100%;" />
+            <button type="submit" class="btn btn-info btn-search col-sm-12 col-md-1 col-lg-1 col-xl-1" id="SearchSubmitBtn"
+                    asp-controller="Job" asp-action="GetAllItem">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+        </div>
+    </form>
+</div>
+<input hidden="hidden" id="item_sort_str" value="@Model.Item_Sort_str" />
+<table class="responstable">
+    <thead>
+        <tr>
+            <th>
+                @if (Model.Item_Sort_str == "-Item_no")
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="Item_no" id="Item_no_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Item_no"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="-Item_no" id="Item_no_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Item_no"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Item_Sort_str == "-Item_name")
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="Item_name" id="Item_name_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Item_name"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="-Item_name" id="Item_name_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Item_name"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Item_Sort_str == "-Item_description")
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="Item_description" id="Item_description_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Item_description"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="-Item_description" id="Item_description_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Item_description"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Item_Sort_str == "-On_hand_quantity")
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="On_hand_quantity" id="On_hand_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.On_hand_quantity"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="-On_hand_quantity" id="On_hand_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.On_hand_quantity"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Item_Sort_str == "-Allocated_quantity")
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="Allocated_quantity" id="Allocated_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Allocated_quantity"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="-Allocated_quantity" id="Allocated_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Allocated_quantity"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Item_Sort_str == "-Available_quantity")
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="Available_quantity" id="Available_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Available_quantity"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="-Available_quantity" id="Available_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Available_quantity"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Item_Sort_str == "-Safety_stock_quantity")
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="Safety_stock_quantity" id="Safety_stock_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Safety_stock_quantity"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="-Safety_stock_quantity" id="Safety_stock_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Safety_stock_quantity"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Item_Sort_str == "-Minimum_order_quantity")
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="Minimum_order_quantity" id="Minimum_order_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Minimum_order_quantity"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="ItemSort" class="sort-link" asp-route-sort="-Minimum_order_quantity" id="Minimum_order_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ItemVM.Minimum_order_quantity"></label>
+                    </a>
+                }
+            </th>
+            @*<th style="padding-left:0.5rem; padding-right:0.5rem; color:white;">@sharedLocalizer["function"]</th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model.ItemListInPaging)
+        {
+            <tr id="ItemRow" name="@item.Item_no">
+                <td>@item.Item_no</td>
+                <td>@item.Item_name</td>
+                <td>@item.Item_description</td>
+                <td>@item.On_hand_quantity</td>
+                <td>@item.Allocated_quantity</td>
+                <td>@item.Available_quantity</td>
+                <td>@item.Safety_stock_quantity</td>
+                <td>@item.Minimum_order_quantity</td>
+            </tr>
+        }
+    </tbody>
+</table>

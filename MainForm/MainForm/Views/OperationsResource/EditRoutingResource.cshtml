@@ -1,0 +1,185 @@
+﻿@model MainForm.ViewModels.OperationsResource.OperationsResourceViewModel
+
+@section AddToHead{
+    <link href="~/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" />
+    <link rel='stylesheet' href='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-4.19.1.min.css?ver=4.19.1' type='text/css' media='all' />
+    <link href="~/css/SettingMaterial.css" rel="stylesheet" />
+}
+
+@*<div class="modal-content">
+    <form method="post">
+        <div class="modal-header">
+            <h4 class="modal-title">編輯徒程資源明細</h4>
+        </div>
+        <div class="modal-body">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <table class="table vm no-th-brd">
+                    <tbody class="editModaltd">
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Routing_resource_id" class="edit-label"></label>
+                            </td>
+                            <td>
+                                <input id="Edit_Routing_resource_id" asp-for="@Model.Routing_resource_id" class="form-control" />
+                                <span asp-validation-for="@Model.Routing_resource_id" class="text-danger"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Routing_id" class="edit-label"></label>
+                            </td>
+                            <td>
+                                <input id="Edit_Routing_id" asp-for="@Model.Routing_id" class="form-control" />
+                                <span asp-validation-for="@Model.Routing_id" class="text-danger"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Workstation_resource_id" class="edit-label"></label>
+                            </td>
+                            <td>
+                                <input id="Edit_Workstation_resource_id" asp-for="@Model.Workstation_resource_id" class="form-control" />
+                                <span asp-validation-for="@Model.Workstation_resource_id" class="text-danger"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Routing_resource_type" class="edit-label"></label>
+                            </td>
+                            <td>
+                                <input id="Edit_Routing_resource_type" asp-for="@Model.Routing_resource_type" class="form-control" />
+                                <span asp-validation-for="@Model.Routing_resource_type" class="text-danger"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Routing_resource_no" class="edit-label"></label>
+                            </td>
+                            <td>
+                                <input id="Edit_Routing_resource_no" asp-for="@Model.Routing_resource_no" class="form-control" />
+                                <span asp-validation-for="@Model.Routing_resource_no" class="text-danger"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Routing_resource_name" class="edit-label"></label>
+                            </td>
+                            <td>
+                                <input id="Edit_Routing_resource_name" asp-for="@Model.Routing_resource_name" class="form-control" />
+                                <span asp-validation-for="@Model.Routing_resource_name" class="text-danger"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Routing_resource_description" class="edit-label"></label>
+                            </td>
+                            <td>
+                                <input id="Edit_Routing_resource_description" asp-for="@Model.Routing_resource_description" class="form-control" />
+                                <span asp-validation-for="@Model.Routing_resource_description" class="text-danger"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Mapping_sys_user" class="edit-label"></label>
+                            </td>
+                            <td>
+                                <input id="Edit_Mapping_sys_user" asp-for="@Model.Mapping_sys_user" class="form-control" />
+                                <span asp-validation-for="@Model.Mapping_sys_user" class="text-danger"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Is_enable" class="edit-label"></label>
+                            </td>
+                            <td>
+                                <input id="Edit_Is_enable" asp-for="@Model.Is_enable" class="form-control" />
+                                <span asp-validation-for="@Model.Is_enable" class="text-danger"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Create_by" class="edit-label"></label>
+                            </td>
+                            <td>
+                                <input id="Edit_Create_by" asp-for="@Model.Create_by" class="form-control" />
+                                <span asp-validation-for="@Model.Create_by" class="text-danger"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Create_date" class="edit-label"></label>
+                            </td>
+                            <td>
+                                <input id="Edit_Create_date" asp-for="@Model.Create_date" class="form-control" />
+                                <span asp-validation-for="@Model.Create_date" class="text-danger"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Last_update_by" class="edit-label"></label>
+                            </td>
+                            <td>
+                                <input id="Edit_Last_update_by" asp-for="@Model.Last_update_by" class="form-control" />
+                                <span asp-validation-for="@Model.Last_update_by" class="text-danger"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label asp-for="@Model.Last_update_date" class="edit-label"></label>
+                            </td>
+                            <td>
+                                <input id="Edit_Last_update_date" asp-for="@Model.Last_update_date" class="form-control" />
+                                <span asp-validation-for="@Model.Last_update_date" class="text-danger"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a type="button" class="btn btn-secondary" asp-controller="RoutingResource" asp-action="Index">Cancel</a>
+            <button type="submit" class="btn btn-primary" id="SaveEditRoutingResource"
+                    asp-controller="RoutingResource" asp-action="EditRoutingResource" asp-route-id="@Model.Routing_resource_id">
+                Save
+            </button>
+        </div>
+    </form>
+</div>*@
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script>
+        //edit routing resource
+        $("#SaveEditRoutingResource").on("click", function () {
+            var url = $(this).attr('formaction');
+            $.ajax({
+                type: "post",
+                url: decodeURIComponent(url),
+                dataType: "html",
+                data: {
+                    routingResource: {
+                        Routing_resource_id: $('#Edit_Routing_resource_id').val(),
+                        Routing_id: $('#Edit_Routing_id').val(),
+                        Workstation_resource_id: $('#Edit_Workstation_resource_id').val(),
+                        Routing_resource_type: $('#Edit_Routing_resource_type').val(),
+                        Routing_resource_no: $('#Edit_Routing_resource_no').val(),
+                        Routing_resource_name: $('#Edit_Routing_resource_name').val(),
+                        Routing_resource_description: $('#Edit_Routing_resource_description').val(),
+                        Mapping_sys_user: $('#Edit_Mapping_sys_user').val(),
+                        Is_enable: $('#Edit_Is_enable').val(),
+                        Create_by: $('#Edit_Create_by').val(),
+                        Create_date: $('#Edit_Create_date').val(),
+                        Last_update_by: $('#Edit_Last_update_by').val(),
+                        Last_update_date: $('#Edit_Last_update_date').val()
+                    }
+                },
+                success: function (result) {
+                },
+                error: function () { alert('Error occurred in edit routing resource.'); }
+            });
+        });
+        //edit routing resource
+    </script>
+}

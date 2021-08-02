@@ -1,0 +1,51 @@
+﻿@using SQLClass.Models.Job
+@using ReflectionIT.Mvc.Paging
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+@model MainForm.ViewModels.Organize.OrganizeViewModel
+@using SQLClass.Models.Company
+
+<div class="x_title">
+    <h2>@sharedLocalizer["Factory_information"]</h2>
+    <ul class="nav panel_toolbox">
+        <li>
+            <a asp-controller="Organize" asp-action="CreateFactory" asp-route-businessUnit_id="@Model.SelectBusinessID"><i class="fa fa-plus"></i></a>
+        </li>
+    </ul>
+    <div class="clearfix"></div>
+</div>
+<div class="x_content">
+    <form class="form-label-left">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>@sharedLocalizer["Factory_id"]</th>
+                    <th>@sharedLocalizer["Factory_name"]</th>
+                    <th>@sharedLocalizer["Factory_description"]</th>
+                    <th style="text-align: center;">
+                        @sharedLocalizer["edit"]
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Factory factory in @Model.FactoryListWithBusinessUnit)
+                {
+    <tr>
+        <td>@factory.Factory_id</td>
+        <td>@factory.Factory_name</td>
+        <td>@factory.Factory_description</td>
+        <td>
+            <a type="button" class="btn btn-primary btn-rounded waves-effect" name="ShowEditFactory"
+               style="padding:0.25rem;"
+               asp-controller="Organize" asp-action="EditFactory" asp-route-id="@factory.Factory_id">
+                <i class="fas fa-edit"></i>
+                @sharedLocalizer["edit"]
+            </a>
+        </td>
+    </tr>}
+            </tbody>
+        </table>
+    </form>
+</div>

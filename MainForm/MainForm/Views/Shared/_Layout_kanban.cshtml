@@ -1,0 +1,40 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+@{ //設置controller和action名稱
+    string controller = string.Empty;
+    string action = string.Empty; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="1800"> @*單位sec*@
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" , shrink-to-fit=no />
+    <title>@sharedLocalizer["web_title"] - @ViewBag.Title</title>
+    <style>
+        table.dataTable thead tr {
+            background-color: #0072E3;
+        }
+        table.dataTable tfoot tr {
+            background-color: #0072E3;
+        }
+    </style>
+
+    @if (IsSectionDefined("AddToHead"))
+    {
+@RenderSection("AddToHead", required: false)}
+</head>
+<body>
+    <div>
+        <div class="main-content">
+            @RenderBody()
+        </div>
+    </div>
+    @RenderSection("Scripts", false)
+</body>
+</html>
+
+

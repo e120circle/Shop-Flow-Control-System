@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{42368C3E-3BEA-4F1D-B93A-724287E7EB9F}|Default">
+  <MonoDevelop.Ide.ItemProperties.MainForm PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MainForm/Models/Home/HomeModel.cs">
+    <Files>
+      <File FileName="MainForm/Models/Home/HomeModel.cs" Line="47" Column="39" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MainForm" expanded="True">
+            <Node name="MainForm" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="HomeModel.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="ViewModels" expanded="True">
+                <Node name="Home" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

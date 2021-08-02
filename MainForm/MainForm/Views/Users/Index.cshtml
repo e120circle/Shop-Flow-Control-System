@@ -1,0 +1,214 @@
+﻿@using SQLClass.Models.Users
+@using ReflectionIT.Mvc.Paging
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@addTagHelper *, ReflectionIT.Mvc.Paging
+@inject IViewLocalizer localizer
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+@*@model ReflectionIT.Mvc.Paging.PagingList<MainForm.ViewModels.Job.JobViewModel>*@
+@model MainForm.ViewModels.Users.UsersViewModel
+
+@section AddToHead{
+    @*<link href="~/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/SettingMaterial.css" rel="stylesheet" />*@
+}
+
+@{
+    ViewBag.Title = @localizer["page_title"];
+    //材質,客戶代號,客戶品號,流程,UOM
+    //item column
+}
+
+<div calss="container" style="padding-top:90px;">
+    <div class="row" style="margin-right:10px; margin-left:10px">
+        <h3 style="margin:auto">@localizer["page_title"]</h3>
+    </div>
+    <div class="container" style="padding:0px">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="overflow-x:auto;">
+            <div class="row col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-top:5px;">
+                <div class="col-sm-12 col-md-12 col-lg-7 col-xl-8" style="padding-left:0;">
+                    @await this.Component.InvokeAsync("Pager", new { pagingList = this.Model.UsersListInPaging })
+                </div>
+            </div>
+            <input hidden="hidden" id="sort_str" value="@Model.Sort_str" />
+            <table class="responstable">
+                <thead>
+                    <tr>
+                        <th>
+                            @if (Model.Sort_str == "-Name")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Name" id="Name_sort_btn">
+                                    <label asp-for="@Model.UserViewModel.Name"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Name" id="Name_sort_btn">
+                                    <label asp-for="@Model.UserViewModel.Name"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-ChinessName")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="ChinessName" id="ChinessName_sort_btn">
+                                    <label asp-for="@Model.UserViewModel.ChinessName"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-ChinessName" id="ChinessName_sort_btn">
+                                    <label asp-for="@Model.UserViewModel.ChinessName"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Accout_role_type")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Accout_role_type" id="Accout_role_type_sort_btn">
+                                    <label asp-for="@Model.UserViewModel.Accout_role_type"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Accout_role_type" id="Accout_role_type_sort_btn">
+                                    <label asp-for="@Model.UserViewModel.Accout_role_type"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Groupe")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Groupe" id="Groupe_sort_btn">
+                                    <label asp-for="@Model.UserViewModel.Groupe"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Groupe" id="Groupe_sort_btn">
+                                    <label asp-for="@Model.UserViewModel.Groupe"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-UserName")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="UserName" id="UserName_sort_btn">
+
+                                    <label asp-for="@Model.UserViewModel.UserName"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-UserName" id="UserName_sort_btn">
+                                    <label asp-for="@Model.UserViewModel.UserName"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Email")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Email" id="Email_sort_btn">
+                                    <label asp-for="@Model.UserViewModel.Email"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Email" id="Email_sort_btn">
+                                    <label asp-for="@Model.UserViewModel.Email"></label>
+                                </a>
+                            }
+                        </th>
+                        <th style="padding-left:0.5rem; padding-right:0.5rem; color:white;">@sharedLocalizer["function"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in @Model.UsersListInPaging)
+                    {
+                        <tr>
+                            <td>@user.Name</td>
+                            <td>@user.ChinessName</td>
+                            <td>@user.Accout_role_type</td>
+                            <td>@user.Groupe</td>
+                            <td>@user.UserName</td>
+                            <td>@user.Email</td>
+                            <td>
+                                <a type="button" class="btn btn-primary btn-rounded waves-effect" name="ShowEditUser"
+                                   style="float:right; padding-left:0.5rem; padding-right:0.5rem;"
+                                   asp-controller="Users" asp-action="EditUser" asp-route-name="@user.Name">
+                                    <i class="fas fa-edit"></i>
+                                    @sharedLocalizer["edit"]
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <nav aria-label="Suppliers navigation example">
+                <vc:pager paging-list="@Model.UsersListInPaging" />
+            </nav>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            var tt = document.getElementById("sort_str").value;
+
+            $('a').removeClass("fas");
+            $('a').removeClass("fa-sort-asc");
+            $('a').removeClass("fa-sort-desc");
+
+            if (tt == "Name") {//sort Name
+                document.getElementById("Name_sort_btn").classList.add("fas");
+                document.getElementById("Name_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Name") {//sort Name
+                document.getElementById("Name_sort_btn").classList.add("fas");
+                document.getElementById("Name_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "ChinessName") {//sort ChinessName
+                document.getElementById("ChinessName_sort_btn").classList.add("fas");
+                document.getElementById("ChinessName_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-ChinessName") {//sort ChinessName
+                document.getElementById("ChinessName_sort_btn").classList.add("fas");
+                document.getElementById("ChinessName_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Accout_role_type") {//sort Accout_role_type
+                document.getElementById("Accout_role_type_sort_btn").classList.add("fas");
+                document.getElementById("Accout_role_type_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Accout_role_type") {//sort Accout_role_type
+                document.getElementById("Accout_role_type_sort_btn").classList.add("fas");
+                document.getElementById("Accout_role_type_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Groupe") {//sort Groupe
+                document.getElementById("Groupe_sort_btn").classList.add("fas");
+                document.getElementById("Groupe_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Groupe") {//sort Groupe
+                document.getElementById("Groupe_sort_btn").classList.add("fas");
+                document.getElementById("Groupe_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "UserName") {//sort UserName
+                document.getElementById("UserName_sort_btn").classList.add("fas");
+                document.getElementById("UserName_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-UserName") {//sort UserName
+                document.getElementById("UserName_sort_btn").classList.add("fas");
+                document.getElementById("UserName_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Email") {//sort Email
+                document.getElementById("Email_sort_btn").classList.add("fas");
+                document.getElementById("Email_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Email") {//sort Email
+                document.getElementById("Email_sort_btn").classList.add("fas");
+                document.getElementById("Email_sort_btn").classList.add("fa-sort-desc");
+            }
+        });
+    </script>
+}

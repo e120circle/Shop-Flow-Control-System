@@ -1,0 +1,173 @@
+﻿@using SQLClass.Models.Job
+@using ReflectionIT.Mvc.Paging
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+@model MainForm.ViewModels.Organize.OrganizeViewModel
+@using SQLClass.Models.Company
+
+@section AddToHead{
+    @*<link href="~/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/SettingMaterial.css" rel="stylesheet" />*@
+}
+
+@{ ViewBag.Title = @sharedLocalizer["Company_information"]; }
+
+<div class="main_container" style="padding-top:90px;">
+    <div role="main" style="margin-left:5px;margin-right:5px;">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>@sharedLocalizer["Company_information"]</h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Settings 1</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Settings 2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav panel_toolbox">
+                            <li>
+                                <a asp-controller="Organize" asp-action="EditCompany"><i class="fa fa-edit"></i></a>
+                            </li>
+                        </ul>
+                        <ul class="nav panel_toolbox">
+                            <li>
+                                <a asp-controller="Organize" asp-action="CreateCompany"><i class="fa fa-plus"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="row">
+                            <label class="col-3" asp-for="@Model.CompanyViewModel.Company_name" style="text-align:right;"></label>
+                            <label class="col-3" style="text-align:left;">@Model.CompanyViewModel.Company_name</label>
+                            <label class="col-3" asp-for="@Model.CompanyViewModel.Company_tax_id" style="text-align:right;"></label>
+                            <label class="col-3" style="text-align:left;">@Model.CompanyViewModel.Company_tax_id</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-3" asp-for="@Model.CompanyViewModel.Company_id" style="text-align:right;"></label>
+                            <label class="col-3" style="text-align:left;">@Model.CompanyViewModel.Company_id</label>
+                            <label class="col-3" asp-for="@Model.CompanyViewModel.Company_no" style="text-align:right;"></label>
+                            <label class="col-3" style="text-align:left;">@Model.CompanyViewModel.Company_no</label>
+                        </div>
+                        <div class="row">
+                            <label class="col-3" asp-for="@Model.CompanyViewModel.Company_description" style="text-align:right;"></label>
+                            <label class="col-3" style="text-align:left;">@Model.CompanyViewModel.Company_description</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @*Business unit*@
+            <div class="col-md-6 ">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>@sharedLocalizer["Business_information"]</h2>
+                        <ul class="nav panel_toolbox">
+                            <li>
+                                <a asp-controller="Organize" asp-action="CreateBusinessUnit" asp-route-company_id="@Model.CompanyViewModel.Company_id"><i class="fa fa-plus"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <form class="form-label-left">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>@sharedLocalizer["Business_unit_no"]</th>
+                                        <th>@sharedLocalizer["Business_unit_name"]</th>
+                                        <th>@sharedLocalizer["Business_unit_description"]</th>
+                                        <th style="text-align: center;">@sharedLocalizer["edit"]
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (BusinessUnit businessUnit in @Model.BusinessUnitList)
+                                    {
+                        <tr class="@(@Model.SelectBusinessID == @businessUnit.Business_unit_id.ToString() ? "row-mouse select" : "row-mouse")"
+                            formaction='@(Url.Action("SelectBusinessUnit", "Organize", new { id = @businessUnit.Business_unit_id.ToString() }))'>
+                            <td>@businessUnit.Business_unit_id</td>
+                            <td>@businessUnit.Business_unit_name</td>
+                            <td>@businessUnit.Business_unit_description</td>
+                            <td>
+                                <a type="button" class="btn btn-primary btn-rounded waves-effect" name="ShowEditBusinessUnit"
+                                   style="padding:0.25rem;"
+                                   asp-controller="Organize" asp-action="EditBusinessUnit" asp-route-id="@businessUnit.Business_unit_id">
+                                    <i class="fas fa-edit"></i>
+                                    @sharedLocalizer["edit"]
+                                </a>
+                            </td>
+                        </tr>
+}
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            @*Business unit*@
+            @*Factory*@
+            <div class="col-md-6 ">
+                <div class="x_panel">
+                    <div id="partialFactory">
+                        @await Html.PartialAsync("_FactoryPartial", Model)
+                    </div>
+                </div>
+            </div>
+            @*Factory*@
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+    <script>//show edit business unit
+        $(document).on("click", 'button[name="ShowEditBusinessUnit"]', function () {
+            var url = $(this).attr('formaction');
+            $.ajax({
+                type: "get",
+                url: decodeURIComponent(url),
+                dataType: "html",
+                success: function (result) {
+                },
+                error: function () { alert('Error occurred in show Edit Business Unit.'); }
+            });
+        });
+        //show edit business unit</script>
+
+    <script>$(".row-mouse").hover(
+            function () {
+                $(this).addClass("enter"); // 觸發 mouseenter 事件 新增 css
+            },
+            function () {
+                $(this).removeClass("enter"); // 觸發 mouseleave 事件 移除 css
+            }
+        );</script>
+
+    <script>//show edit business unit
+        $(".row-mouse").on('click', function (event) {
+            $('tr').removeClass('select'); // removes all highlights from tr's
+            $(this).addClass("select"); // 觸發 mouseenter 事件 新增 css
+
+            var url = $(this).attr('formaction');
+            $.ajax({
+                type: "get",
+                url: decodeURIComponent(url),
+                dataType: "html",
+                success: function (result) {
+                    $("#partialFactory").html(result);
+                },
+                error: function () { alert('Error occurred in select Business Unit.'); }
+            });
+        });
+                            //show edit business unit</script>
+}

@@ -1,0 +1,226 @@
+﻿@using ReflectionIT.Mvc.Paging
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+@model MainForm.ViewModels.Organize.OrganizeViewModel
+@using SQLClass.Models.Company
+
+@section AddToHead{
+    @*<link href="~/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/SettingMaterial.css" rel="stylesheet" />*@
+}
+
+@{ ViewBag.Title = @sharedLocalizer["Edit_Factory_information"]; }
+
+<div class="modal-content" style="padding-top:90px;">
+    <form method="post" id="EditFactoryForm">
+        <div class="card-header">
+            <h4 class="card-title">@sharedLocalizer["Edit_Factory_information"]</h4>
+        </div>
+        <div class="card-body">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Factory_name" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Factory_name" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Factory_name" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Factory_id" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Factory_id" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Factory_id" class="form-control" readonly="readonly" />
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Factory_no" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Factory_no" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Factory_no" class="form-control" readonly="readonly" />
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Business_unit_id" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Business_unit_id" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Business_unit_id" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Factory_description" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Factory_description" class="text-danger"></span>
+                            </div>
+                            <textarea asp-for="@Model.FactoryViewModel.Factory_description" class="form-control" style="resize:none; min-height:70px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row" hidden="hidden">
+                    <div class="col">
+                        <div class="form-group" style="margin:0;">
+                            <div class="row" style="align-items:center; display:flex;">
+                                <input asp-for="@Model.FactoryViewModel.Is_enable" class="form-check-input" style="margin:1.25rem;" />
+                                <label asp-for="@Model.FactoryViewModel.Is_enable" class="form-check-label" style="margin-left:3rem;"></label>
+                            </div>
+                            <span asp-validation-for="@Model.FactoryViewModel.Is_enable" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Create_by" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Create_by" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Create_by" class="form-control" readonly="readonly" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Create_date" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Create_date" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Create_date" class="form-control" readonly="readonly" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Last_update_by" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Last_update_by" class="text-danger"></span>
+                            </div>
+                            <select asp-for="@Model.FactoryViewModel.Last_update_by" asp-items="@Model.LastUpdateUserList" class="form-control"></select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Last_update_date" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Last_update_date" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Last_update_date" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-right">
+            <a type="button" class="btn btn-secondary" asp-controller="Organize" asp-action="Index">@sharedLocalizer["cancel"]</a>
+            <button type="button" class="btn btn-danger" name="DeleteFactory"
+                    asp-controller="Organize" asp-action="DeleteFactory" asp-route-id="@Model.FactoryViewModel.Factory_id">
+                @sharedLocalizer["delete"]
+            </button>
+            <button type="button" class="btn btn-primary" name="SaveEditFactory"
+                    asp-controller="Organize" asp-action="EditFactory" asp-route-id="@Model.FactoryViewModel.Factory_id">
+                @sharedLocalizer["save"]
+            </button>
+        </div>
+    </form>
+</div>
+
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+    <script>//save edit factory
+        $(document).on("click", 'button[name="SaveEditFactory"]', function () {
+            var url = $(this).attr('formaction');
+            $.ajax({
+                type: "post",
+                url: decodeURIComponent(url),
+                dataType: "html",
+                data: $("#EditFactoryForm").serialize(),
+                success: function (result) {
+                    if (result) {
+                        $('body').html(result);
+                    }
+                },
+                error: function () { alert('Error occurred in save edit factory.'); }
+            });
+        });
+        //save edit factory</script>
+
+    <script>$(".custom-select").each(function () {
+            var classes = $(this).attr("class"),
+                id = $(this).attr("id"),
+                name = $(this).attr("name");
+            var template = '<div class="' + classes + '">';
+            template += '<span id="selectval" class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+            template += '<div class="custom-options">';
+            $(this).find("option").each(function () {
+                template += '<span class="custom-option ' + $(this).attr("class") + '" id="' + $(this).attr("id") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+            });
+            template += '</div></div>';
+
+            $(this).wrap('<div class="custom-select-wrapper"></div>');
+            $(this).hide();
+            $(this).after(template);
+        });
+
+        $(".custom-option:first-of-type").hover(function () {
+            $(this).parents(".custom-options").addClass("option-hover");
+        }, function () {
+            $(this).parents(".custom-options").removeClass("option-hover");
+        });
+        $(".custom-select-trigger").on("click", function () {
+            $('html').one('click', function () {
+                $(".custom-select").removeClass("opened");
+            });
+            $(this).parents(".custom-select").toggleClass("opened");
+            event.stopPropagation();
+        });
+        $(".custom-option").on("click", function () {
+            $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+            $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+            $(this).addClass("selection");
+            $(this).parents(".custom-select").removeClass("opened");
+            $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+        });</script>
+
+    <script>$(document).ready(function () {
+            var idd = '#' + $(".custom-select-wrapper").find("select").val();
+            var iid = $(".custom-select-wrapper").find("select").val();
+            $(".custom-options").find(".custom-option").removeClass("selection");
+            $(".custom-options").find(idd).addClass("selection");
+            $(".custom-select").find(".custom-select-trigger").text(iid);
+        });</script>
+
+    <script>//delete factory
+        $(document).on("click", 'button[name="DeleteFactory"]', function () {
+            var confirmation = window.confirm("Are you sure?"); //confirmation variable will contain true/false.
+            if (confirmation) {
+                var url = $(this).attr('formaction');
+                $.ajax({
+                    type: "post",
+                    url: decodeURIComponent(url),
+                    dataType: "html",
+                    success: function (result) {
+                        if (result) {
+                            $('body').html(result);
+                        }
+                    },
+                    error: function () { alert('Error occurred in delete factory.'); }
+                });
+            }
+        });
+                //delete factory</script>
+}

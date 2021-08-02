@@ -1,0 +1,45 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+
+@model MainForm.ViewModels.Operations.OperationsViewModel
+
+@inject IViewLocalizer localizer
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+
+<span asp-validation-for="@Model.SelectMachineStr" class="text-danger"></span>
+<input asp-for="@Model.SelectMachineStr" class="form-control col-6" hidden="hidden" />
+<table class="responstable">
+    <thead>
+        <tr>
+            <th>
+                <label asp-for="@Model.DetailViewModel.Operations_resource_no">@localizer["machine_no"]</label>
+            </th>
+            <th>
+                <label asp-for="@Model.DetailViewModel.Operations_resource_name">@localizer["machine_name"]</label>
+            </th>
+            <th>
+                <label asp-for="@Model.DetailViewModel.Operations_resource_description">@localizer["machine_description"]</label>
+            </th>
+            <th style="padding-left:0.5rem; padding-right:0.5rem;">@sharedLocalizer["function"]</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var machine in @Model.SelectMachine)
+        {
+            <tr>
+                <td>@machine.Resource_no</td>
+                <td>@machine.Resource_name</td>
+                <td>@machine.Resource_description</td>
+                <td>
+                    <div class="row">
+                        <button type="button" class="btn btn-danger waves-effect" id="DelMachineBtn"
+                                asp-controller="Operations" asp-action="RemoveSelectMachine"
+                                asp-route-no="@machine.Resource_no">
+                            @sharedLocalizer["delete"]
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

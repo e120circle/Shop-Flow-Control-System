@@ -1,0 +1,417 @@
+﻿@using SQLClass.Models.OperationsSubmit
+@using ReflectionIT.Mvc.Paging
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@addTagHelper *, ReflectionIT.Mvc.Paging
+@inject IViewLocalizer localizer
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+@model MainForm.ViewModels.Operations.OperationsViewModel
+
+@section AddToHead{
+    @*<link href="~/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/SettingMaterial.css" rel="stylesheet" />*@
+}
+
+@{
+    ViewBag.Title = @localizer["page_title"];
+}
+
+<div calss="container">
+    <div class="row" style="margin-right:10px; margin-left:10px;padding-top:90px;">
+        <h3 style="margin:auto">@localizer["page_title"]</h3>
+    </div>
+    <div class="container" style="padding:0px">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="overflow-x:auto;">
+            <div class="col-12" style="margin-top:5px;">
+                <form method="post" class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="form-group col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="row">
+                            <label asp-for="@Model.WorkViewModel.Item_no" class="col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"
+                                   style="margin-bottom:0px; margin-top:10px;padding:0px;vertical-align:middle;"></label>
+                            <label class="col-sm-3 col-md-3 col-lg-5 col-xl-5"
+                                   style="margin-bottom:0px; margin-top:10px;padding:0px;vertical-align:middle;">
+                                @Model.WorkViewModel.Item_no
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="row">
+                            <label asp-for="@Model.WorkViewModel.Item_name" class="col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"
+                                   style="margin-bottom:0px; margin-top:10px;padding:0px;vertical-align:middle;"></label>
+                            <label class="col-sm-3 col-md-3 col-lg-5 col-xl-5"
+                                   style="margin-bottom:0px; margin-top:10px;padding:0px;vertical-align:middle;">
+                                @Model.WorkViewModel.Item_name
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="row">
+                            <label asp-for="@Model.WorkViewModel.Item_description" class="col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"
+                                   style="margin-bottom:0px; margin-top:10px;padding:0px;vertical-align:middle;"></label>
+                            <label class="col-sm-3 col-md-3 col-lg-5 col-xl-5"
+                                   style="margin-bottom:0px; margin-top:10px;padding:0px;vertical-align:middle;">
+                                @Model.WorkViewModel.Item_description
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="row">
+                            <input name="Job_no_filter" id="JobNo_filter" class="form-control col-sm-3 col-md-3 col-lg-5 col-xl-5"
+                                   placeholder="@localizer["search_Job_no"]" style="margin-bottom:0px; margin-top:10px;vertical-align:middle;"
+                                   value="@Model.RoutingListInPaging.RouteValue["Job_no_filter"]" />
+                            <button type="submit" class="btn btn-info btn-search col-sm-3 col-md-3 col-lg-5 col-xl-5"
+                                    style="margin-bottom:0px; margin-top:10px;vertical-align:middle;">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                @sharedLocalizer["search"]
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <input hidden="hidden" id="sort_str" value="@Model.Sort_str" />
+            <table class="responstable">
+                <thead>
+                    <tr>
+                        <th>
+                            @if (Model.Sort_str == "-Routing_no")
+                            {
+                                <a asp-page="/Start" class="sort-link" asp-route-sort="Routing_no" id="Routing_no_sort_btn">
+                                    <label asp-for="@Model.RoutingViewModel.Routing_no"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Start" class="sort-link" asp-route-sort="-Routing_no" id="Routing_no_sort_btn">
+                                    <label asp-for="@Model.RoutingViewModel.Routing_no"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Routing_name")
+                            {
+                                <a asp-page="/Start" class="sort-link" asp-route-sort="Routing_name" id="Routing_name_sort_btn">
+                                    <label asp-for="@Model.RoutingViewModel.Routing_name"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Start" class="sort-link" asp-route-sort="-Routing_name" id="Routing_name_sort_btn">
+                                    <label asp-for="@Model.RoutingViewModel.Routing_name"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Scheduled_completion_quantity")
+                            {
+                                <a asp-page="/Start" class="sort-link" asp-route-sort="Scheduled_completion_quantity" id="Scheduled_completion_quantity_sort_btn">
+                                    <label asp-for="@Model.RoutingViewModel.Scheduled_completion_quantity"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Start" class="sort-link" asp-route-sort="-Scheduled_completion_quantity" id="Job_status_sort_btn">
+                                    <label asp-for="@Model.RoutingViewModel.Scheduled_completion_quantity"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Actually_completion_quantity")
+                            {
+                                <a asp-page="/Start" class="sort-link" asp-route-sort="Actually_completion_quantity" id="Actually_completion_quantity_sort_btn">
+                                    <label asp-for="@Model.RoutingViewModel.Actually_completion_quantity"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Start" class="sort-link" asp-route-sort="-Actually_completion_quantity" id="Actually_completion_quantity_sort_btn">
+                                    <label asp-for="@Model.RoutingViewModel.Actually_completion_quantity"></label>
+                                </a>
+                            }
+                        </th>
+                        <th style="padding-left:0.5rem; padding-right:0.5rem; color:white;">@sharedLocalizer["function"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var routing in @Model.RoutingListInPaging)
+                    {
+                        var quan = 0;
+                        foreach (OperationsSubmit a in Model.SubmitList)
+                        {
+                            if (a.Routing_id == routing.Routing_id) quan += a.Actually_completion_quantity;
+                        }
+                        <tr>
+                            <td>@routing.Routing_no</td>
+                            <td>@routing.Routing_name</td>
+                            <td>@routing.Scheduled_completion_quantity</td>
+                            <td>@quan</td>
+                            <td>
+                                <div class="row">
+                                    <button type="submit" class="collapsible btn btn-primary btn-rounded waves-effect rounded-circle"
+                                            name="@routing.Routing_no" id="collapsBtn"
+                                            asp-controller="Operations" asp-action="GetSubmitLike"
+                                            asp-route-routing_no="@routing.Routing_no">
+                                    </button>
+                                </div>
+                            </td>
+                            <td id="ahidden" hidden="hidden">
+                                <a type="button" class="btn btn-primary btn-rounded waves-effect" name="ShowEditSubmit"
+                                   style="float:right; padding-left:0.5rem; padding-right:0.5rem;"
+                                   asp-controller="Operations" asp-action="EditOperations"
+                                   asp-route-job_id="@routing.Job_id" asp-route-routing_no="routing_noStr"
+                                   asp-route-submit_no="NoStr">
+                                    <i class="fas fa-edit"></i>
+                                    @localizer["finish"]
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">
+                                <div id="@routing.Routing_no" class="collapse-div">
+                                    <table class="responstable" id="myTable" style="background-color: transparent;">
+                                        <thead>
+                                            <tr>
+                                                <th style="background-color:#FFFFFF; border-radius:0px; border: 1px solid #D9E4E6;">
+                                                    <label asp-for="@Model.SubmitViewModel.Operations_submit_no"></label>
+                                                </th>
+                                                <th style="background-color:#FFFFFF; border-radius:0px; border: 1px solid #D9E4E6;">
+                                                    <label>機台編號</label>
+                                                </th>
+                                                <th style="background-color:#FFFFFF; border-radius:0px; border: 1px solid #D9E4E6;">
+                                                    <label asp-for="@Model.SubmitViewModel.Operations_submit_type"></label>
+                                                </th>
+                                                <th style="background-color:#FFFFFF; border-radius:0px; border: 1px solid #D9E4E6;">
+                                                    <label asp-for="@Model.SubmitViewModel.Actually_completion_quantity"></label>
+                                                </th>
+                                                <th style="background-color:#FFFFFF; border-radius:0px; border: 1px solid #D9E4E6;">
+                                                    <label asp-for="@Model.SubmitViewModel.Actually_start_date"></label>
+                                                </th>
+                                                <th style="background-color:#FFFFFF; border-radius:0px; border: 1px solid #D9E4E6;">
+                                                    <label asp-for="@Model.SubmitViewModel.Actually_completion_date"></label>
+                                                </th>
+                                                <th style="background-color:#FFFFFF; border-radius:0px; border: 1px solid #D9E4E6;">
+                                                    @sharedLocalizer["function"]
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="responstable-tbody">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    <script>
+        //show collaps column
+        $(document).on("click", 'button[id="collapsBtn"]', function (e) {
+            e.preventDefault();
+            var url = $(this).attr('formaction');
+            var idd = $(this).attr('name');
+            var testElement = document.getElementById(idd);
+            var aa = document.getElementById("ahidden").innerHTML;
+
+            $(this).toggleClass("btn-active");
+
+            if (testElement.classList.contains('collapse-div')) {
+                testElement.getElementsByTagName('tbody')[0].innerHTML = '';
+
+                $.ajax({
+                    type: "post",
+                    url: decodeURIComponent(url),
+                    dataType: "json",
+                    success: function (data) {
+                        //Actually_completion_date
+                        $.each(data.submit, function (index) {
+                            var value1 = new Date(data.submit[index].actually_start_date);
+                            var start = "";
+                            if (value1.getFullYear() < 2000)
+                                start = "--";
+                            else
+                                start = value1.getFullYear() + "/" + (value1.getMonth() + 1) + "/" + value1.getDate() +
+                                    "<br>" + value1.getHours() + ":" + value1.getMinutes() + ":" + value1.getSeconds();
+
+                            var value2 = new Date(data.submit[index].actually_completion_date);
+                            var completion = "";
+                            if (value2.getFullYear() < 2000)
+                                completion = "--";
+                            else
+                                completion = value2.getFullYear() + "/" + (value2.getMonth() + 1) + "/" + value2.getDate() +
+                                    "<br>" + value2.getHours() + ":" + value2.getMinutes() + ":" + value2.getSeconds();
+
+                            var machine = "";
+                            machine = data.detail[index].operations_resource_no +
+                                data.detail[index].operations_resource_name;
+
+                            var type = "";
+                            if (data.submit[index].operations_submit_type == data.type[0].value)
+                                type = data.type[0].text;
+                            else
+                                type = data.type[1].text;
+
+                            var quan = data.submit[index].actually_completion_quantity;
+
+                            
+                            bb = aa.replace("NoStr", data.submit[index].operations_submit_no);
+                            cc = bb.replace("routing_noStr", data.routing_no);
+
+                            testElement.getElementsByTagName('tbody')[0].innerHTML +=
+                                "<tr class='child' style='background-color:snow;'><td>" + data.submit[index].operations_submit_no + "</td>" +
+                                "<td>" + machine + "</td>" +
+                                "<td>" + type + "</td>" +
+                                "<td>" + quan + "</td>" +
+                                "<td>" + start + "</td>" +
+                                "<td>" + completion + "</td>" + 
+                                "<td>" + cc + "</td></tr > ";
+                        });
+                    },
+                    error: function () { alert('Error occurred in show collapse.'); }
+                });
+
+                testElement.classList.remove('collapse-div')
+                testElement.classList.add('extend-div')
+            } else {
+                testElement.classList.remove('extend-div')
+                testElement.classList.add('collapse-div')
+            }
+        });
+        //show collaps column
+    </script>
+
+    <script>
+        $.widget("custom.catcomplete", $.ui.autocomplete, {
+            _renderMenu: function (ul, items) {
+                var that = this;
+                $.each(items, function (index, item) {
+                    that._renderItemData(ul, item);
+                });
+            }
+        });
+
+        $.ui.autocomplete.prototype._renderItem = function (ul, item) {
+            var re = new RegExp(this.term, "i");
+            var t = item.label.replace(re, "<span style='font-weight:bold;color:#0CE;'>" + this.term + "</span>");
+            return $("<li></li>")
+                .data("item.autocomplete", item)
+                .append("<a>" + t + "</a>")
+                .appendTo(ul);
+        };
+
+        $(function () {
+            $("#JobNo_filter").catcomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: "/Operations/GetJob_no",
+                        type: "POST",
+                        dataType: "json",
+                        data: { term: request.term },
+                        success: function (data) {
+                            response($.map(data, function (item) {
+                                return { label: item.term, value: item.job_no }
+                            }));
+                        },
+                    });
+                },
+                select: function (event, ui) {
+                },
+                focus: function (event, ui) {
+                },
+                minLength: 5
+            });
+        });
+
+        $("#JobNo_filter").on('focus', function () {
+            $("#JobNo_filter").catcomplete("search");
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var tt = document.getElementById("sort_str").value;
+
+            $('a').removeClass("fas");
+            $('a').removeClass("fa-sort-asc");
+            $('a').removeClass("fa-sort-desc");
+
+            if (tt == "Job_no") {//sort job_no
+                document.getElementById("Job_no_sort_btn").classList.add("fas");
+                document.getElementById("Job_no_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Job_no") {//sort job_no
+                document.getElementById("Job_no_sort_btn").classList.add("fas");
+                document.getElementById("Job_no_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Job_source_type") {//sort Job_source_type
+                document.getElementById("Job_source_type_sort_btn").classList.add("fas");
+                document.getElementById("Job_source_type_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Job_source_type") {//sort Job_source_type
+                document.getElementById("Job_source_type_sort_btn").classList.add("fas");
+                document.getElementById("Job_source_type_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Job_status") {//sort Job_status
+                document.getElementById("Job_status_sort_btn").classList.add("fas");
+                document.getElementById("Job_status_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Job_status") {//sort Job_status
+                document.getElementById("Job_status_sort_btn").classList.add("fas");
+                document.getElementById("Job_status_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Item_no") {//sort item_no
+                document.getElementById("Item_no_sort_btn").classList.add("fas");
+                document.getElementById("Item_no_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Item_no") {//sort item_no
+                document.getElementById("Item_no_sort_btn").classList.add("fas");
+                document.getElementById("Item_no_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Item_name") {//sort Item_name
+                document.getElementById("Item_name_sort_btn").classList.add("fas");
+                document.getElementById("Item_name_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Item_name") {//sort Item_name
+                document.getElementById("Item_name_sort_btn").classList.add("fas");
+                document.getElementById("Item_name_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Scheduled_completion_date") {//sort Scheduled_completion_date
+                document.getElementById("Scheduled_completion_date_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_date_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Scheduled_completion_date") {//sort Scheduled_completion_date
+                document.getElementById("Scheduled_completion_date_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_date_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Job_released_date") {//sort Job_released_date
+                document.getElementById("Job_released_date_sort_btn").classList.add("fas");
+                document.getElementById("Job_released_date_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Job_released_date") {//sort Job_released_date
+                document.getElementById("Job_released_date_sort_btn").classList.add("fas");
+                document.getElementById("Job_released_date_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Scheduled_completion_quantity") {//sort Scheduled_completion_quantity
+                document.getElementById("Scheduled_completion_quantity_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_quantity_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Scheduled_completion_quantity") {//sort Scheduled_completion_quantity
+                document.getElementById("Scheduled_completion_quantity_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_quantity_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Scheduled_completion_quantity_uom") {//sort Scheduled_completion_quantity_uom
+                document.getElementById("Scheduled_completion_quantity_uom_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_quantity_uom_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Scheduled_completion_quantity_uom") {//sort Scheduled_completion_quantity_uom
+                document.getElementById("Scheduled_completion_quantity_uom_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_quantity_uom_sort_btn").classList.add("fa-sort-desc");
+            }
+        });
+    </script>
+}

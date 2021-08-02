@@ -1,0 +1,73 @@
+﻿@model List<MainForm.Models.Setting.Machine>
+
+@using MainForm.Models.Setting;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <ul>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div>
+                                <h5 class="card-title">設備清單</h5>
+                            </div>
+                            @*<div class="ml-auto">
+                                <select class="custom-select b-0">
+                                    <option selected="">January</option>
+                                    <option value="1">February</option>
+                                    <option value="2">March</option>
+                                    <option value="3">April</option>
+                                </select>
+                            </div>*@
+                        </div>
+                        <div class="table-responsive m-t-20 no-wrap">
+                            <table class="table vm no-th-brd pro-of-month">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">機號</th>
+                                        <th>群組1</th>
+                                        <th>群組2</th>
+                                        <th>群組3</th>
+                                        <th>群組4</th>
+                                        <th>群組5</th>
+                                        <th>機台名稱</th>
+                                        <th>建立者</th>
+                                        <th>建立日期</th>
+                                        <th>最後更新</th>
+                                        <th>最後更新日期</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (Machine machine in @Model)
+                                    {
+                                    <tr>
+                                        <td style="width:50px;"><span class="round">S</span></td>
+                                        <td>
+                                            <h6>@machine.No</h6><small class="text-muted">Web Designer</small>
+                                        </td>
+                                        <td>@machine.GR1</td>
+                                        <td>@machine.GR2</td>
+                                        <td>@machine.GR3</td>
+                                        <td>@machine.GR4</td>
+                                        <td>@machine.GR5</td>
+                                        <td>@machine.Name</td>
+                                        <td>@machine.C_By</td>
+                                        <td>@machine.C_Date</td>
+                                        <td>@machine.U_By</td>
+                                        <td>@machine.U_Date</td>
+                                    </tr>
+                                     }
+                                    </tbody>
+                                </table>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </ul>
+</div>

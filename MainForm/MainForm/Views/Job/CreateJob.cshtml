@@ -1,0 +1,773 @@
+﻿@using SQLClass.Models.Routing
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@model MainForm.ViewModels.Job.JobViewModel
+
+@inject IViewLocalizer localizer
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+@section AddToHead{
+    @*<link href="~/vendor/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/SettingMaterial.css" rel="stylesheet" />*@
+}
+
+@{
+    ViewBag.Title = @localizer["page_title"];
+}
+
+<div class="modal-content" style="background-color:#F2EEE5;border:0px;padding-top:90px;">
+    <div class="col-lg-12" style="padding:0;">
+        <div class="tab_container">
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1"><i class="fas fa-scroll"></i><span>@localizer["job_tab"]</span></label>
+            <input id="tab2" type="radio" name="tabs" disabled="disabled">
+            <label for="tab2"><i class="fas fa-list-ol"></i><span>@localizer["route_tab"]</span></label>
+            <section id="content1" class="tab-content">
+                <form method="post" id="CreateJobForm">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row card-title">
+                                <h3 class="text-center title-2 col-8">@Model.Company_name <small>@localizer["job_title"]</small></h3>
+                                <label class="barcode" style="font-weight: normal; font-style:normal; 
+                                          line-height:normal; font-family: 'Code128', 'sans-serif';
+                                          font-size: 32px">@Model.WorkViewModel.Job_barcode</label>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <img class="col-3" src="~/images/qricon.png" style="border-style:double;width:auto;height:auto;max-width:200px;max-height:200px;" hidden="hidden" />
+                            <div class="row" style="overflow:auto;">
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Job_no" asp-postfix class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input asp-for="@Model.WorkViewModel.Job_no" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" readonly="readonly" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Job_no" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Reserved_field01" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix" postfix></label>
+                                            <input asp-for="@Model.WorkViewModel.Reserved_field01" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Reserved_field01" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col" hidden="hidden">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Job_id" class="edit-label"></label>
+                                            <input asp-for="@Model.WorkViewModel.Job_id" class="form-control" readonly="readonly" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Job_id" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Employee_id" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            @*<select asp-for="@Model.WorkViewModel.Employee_id" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7 dropdown-style" disabled="disabled">
+                                                <option selected disabled>Titles</option>
+                                                @foreach (var title in Model.EmployeeUserList)
+                                                {
+                                                    <option value="@title.Value" selected="@title.Selected">@title.Text</option>
+                                                }
+                                            </select>*@
+                                            <select asp-for="@Model.WorkViewModel.Employee_id" asp-items="@Model.EmployeeUserList" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7 dropdown-style"></select>
+                                            @*<input asp-for="@Model.WorkViewModel.Employee_id" hidden="hidden" />*@
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Employee_id" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Job_status" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            @*<select asp-for="@Model.WorkViewModel.Job_status" asp-items="@Html.GetEnumSelectList(typeof(MainForm.Models.Job.JobModel.Status))" class="form-control col-6" disabled="disabled"></select>*@
+                                            <select asp-items="@Model.JobStatusList" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" disabled="disabled"></select>
+                                            <input asp-for="@Model.WorkViewModel.Job_status" hidden="hidden" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Job_status" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="overflow:auto;">
+                                <div class="col" hidden="hidden">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Factory_id" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5"></label>
+                                            <select asp-for="@Model.WorkViewModel.Factory_id" asp-items="@Model.FactoryList" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7"></select>
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Factory_id" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Job_source_type" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <select asp-items="@Model.WorkViewModel.JobSourceTypeList" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" disabled="disabled"></select>
+                                            <input asp-for="@Model.WorkViewModel.Job_source_type" hidden="hidden" />
+                                        </div>
+
+                                        <span asp-validation-for="@Model.WorkViewModel.Job_source_type" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Job_source_no" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input asp-for="@Model.WorkViewModel.Job_source_no" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" readonly="readonly" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Job_source_no" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col" hidden="hidden">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Job_source_id" class="edit-label"></label>
+                                            <input asp-for="@Model.WorkViewModel.Job_source_id" class="form-control" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Job_source_id" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="overflow:auto;">
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Job_date" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input type="date" asp-for="@Model.WorkViewModel.Job_date" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Job_date" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Job_released_date" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input type="date" asp-for="@Model.WorkViewModel.Job_released_date" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" readonly="readonly" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Job_released_date" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Job_closed_date" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input type="date" asp-for="@Model.WorkViewModel.Job_closed_date" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" readonly="readonly" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Job_closed_date" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Reserved_field02" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input asp-for="@Model.WorkViewModel.Reserved_field02" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Reserved_field02" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row" style="overflow:auto;">
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Item_no" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input asp-for="@Model.WorkViewModel.Item_no" asp-controller="Job" asp-action="GetItem" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Item_no" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Item_name" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input asp-for="@Model.WorkViewModel.Item_name" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Item_name" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Item_description" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <textarea asp-for="@Model.WorkViewModel.Item_description" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7"
+                                                      style="min-height: calc(2.25rem + 2px);"></textarea>
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Item_description" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Item_type" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <select id="Item_type_select" asp-items="@Model.ItemTypeList" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7 dropdown-style">
+                                                <option value=""></option>
+                                            </select>
+                                            <input asp-for="@Model.WorkViewModel.Item_type" hidden="hidden" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Item_type" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6" hidden="hidden">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Item_id" class="edit-label col-6"></label>
+                                            <input asp-for="@Model.WorkViewModel.Item_id" class="form-control col-6" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Item_id" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-4" hidden="hidden">
+                                    <div class="form-group" hidden="hidden">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Customer_order_id" class="edit-label col-6"></label>
+                                            <input asp-for="@Model.WorkViewModel.Customer_order_id" class="form-control col-6" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Customer_order_id" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group" hidden="hidden">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Customer_order_no" class="edit-label col-6"></label>
+                                            <input asp-for="@Model.WorkViewModel.Customer_order_no" class="form-control col-6" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Customer_order_no" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-4" hidden="hidden">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.WorkViewModel.Customer_shipping_address" class="edit-label col-6" style="float:left;"></label>
+                                        <textarea asp-for="@Model.WorkViewModel.Customer_shipping_address" class="form-control" style="min-height:70px;"></textarea>
+                                    </div>
+                                    <span asp-validation-for="@Model.WorkViewModel.Customer_shipping_address" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="row" style="overflow:auto;">
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Customer_no" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input asp-for="@Model.WorkViewModel.Customer_no" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Customer_no" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3" hidden="hidden">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Customer_name" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input asp-for="@Model.WorkViewModel.Customer_name" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Customer_name" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Customer_order_quantity" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input asp-for="@Model.WorkViewModel.Customer_order_quantity" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Customer_order_quantity" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6" hidden="hidden">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Customer_order_quantity_uom" class="edit-label col-6"></label>
+                                            <input asp-for="@Model.WorkViewModel.Customer_order_quantity_uom" class="form-control col-6" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Customer_order_quantity_uom" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Customer_shipping_date" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input type="date" asp-for="@Model.WorkViewModel.Customer_shipping_date" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Customer_shipping_date" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row" style="overflow:auto;">
+                                <div class="col-4" hidden="hidden">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Scheduled_start_date" class="edit-label col-6"></label>
+                                            <input asp-for="@Model.WorkViewModel.Scheduled_start_date" class="form-control col-6" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Scheduled_start_date" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Scheduled_completion_date" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input type="date" asp-for="@Model.WorkViewModel.Scheduled_completion_date" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Scheduled_completion_date" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Actually_start_date" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input type="date" asp-for="@Model.WorkViewModel.Actually_start_date" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" readonly="readonly" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Actually_start_date" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Actually_completion_date" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                            <input type="date" asp-for="@Model.WorkViewModel.Actually_completion_date" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" readonly="readonly" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Actually_completion_date" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="overflow:auto;">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                            <div class="row">
+                                                <label asp-for="@Model.WorkViewModel.Scheduled_completion_quantity" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                                <input asp-for="@Model.WorkViewModel.Scheduled_completion_quantity" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+                                            </div>
+                                            <span asp-validation-for="@Model.WorkViewModel.Scheduled_completion_quantity" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                            <div class="row">
+                                                <label asp-for="@Model.WorkViewModel.Scheduled_completion_quantity_uom" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                                <select asp-for="@Model.WorkViewModel.Scheduled_completion_quantity_uom" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7 dropdown-style"></select>
+                                            </div>
+                                            <span asp-validation-for="@Model.WorkViewModel.Scheduled_completion_quantity_uom" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="overflow:auto;">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                            <div class="row">
+                                                <label asp-for="@Model.WorkViewModel.Actually_completion_quantity" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                                <input asp-for="@Model.WorkViewModel.Actually_completion_quantity" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" readonly="readonly" />
+                                            </div>
+                                            <span asp-validation-for="@Model.WorkViewModel.Actually_completion_quantity" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-3" hidden="hidden">
+                                            <div class="row">
+                                                <label asp-for="@Model.WorkViewModel.Actually_completion_quantity_uom" class="edit-label col-6"></label>
+                                                <input asp-for="@Model.WorkViewModel.Actually_completion_quantity_uom" class="form-control col-6" readonly="readonly" />
+                                            </div>
+                                            <span asp-validation-for="@Model.WorkViewModel.Actually_completion_quantity_uom" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                            <div class="row">
+                                                <label asp-for="@Model.WorkViewModel.Input_of_inventory_quantity" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                                <input asp-for="@Model.WorkViewModel.Input_of_inventory_quantity" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" readonly="readonly" />
+                                            </div>
+                                            <span asp-validation-for="@Model.WorkViewModel.Input_of_inventory_quantity" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-4" hidden="hidden">
+                                            <div class="row">
+                                                <label asp-for="@Model.WorkViewModel.Input_of_inventory_quantity_uom" class="edit-label col-6"></label>
+                                                <input asp-for="@Model.WorkViewModel.Input_of_inventory_quantity_uom" class="form-control col-6" readonly="readonly" />
+                                            </div>
+                                            <span asp-validation-for="@Model.WorkViewModel.Input_of_inventory_quantity_uom" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                            <div class="row">
+                                                <label asp-for="@Model.WorkViewModel.Actually_defective_quantity" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                                <input asp-for="@Model.WorkViewModel.Actually_defective_quantity" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" readonly="readonly" />
+                                            </div>
+                                            <span asp-validation-for="@Model.WorkViewModel.Actually_defective_quantity" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-4" hidden="hidden">
+                                            <div class="row">
+                                                <label asp-for="@Model.WorkViewModel.Actually_defective_quantity_uom" class="edit-label col-6"></label>
+                                                <input asp-for="@Model.WorkViewModel.Actually_defective_quantity_uom" class="form-control col-6" readonly="readonly" />
+                                            </div>
+                                            <span asp-validation-for="@Model.WorkViewModel.Actually_defective_quantity_uom" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row" style="overflow:auto;">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Job_description" class="edit-label postfix"></label>
+                                            <textarea asp-for="@Model.WorkViewModel.Job_description" class="form-control" style="height: 160px; min-height: 70px;"></textarea>
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Job_description" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6" hidden="hidden">
+                                    <div class="form-group" style="margin:0;">
+                                        <div class="row" style="align-items:center; display:flex;">
+                                            <input asp-for="@Model.WorkViewModel.Is_classification_defective_item" class="form-check-input" style="margin:1.25rem;" />
+                                            <label asp-for="@Model.WorkViewModel.Is_classification_defective_item" class="form-check-label" style="margin-left:3rem;"></label>
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Is_classification_defective_item" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6" hidden="hidden">
+                                    <div class="form-group" style="margin:0;">
+                                        <div class="row" style="align-items:center; display:flex;">
+                                            <input asp-for="@Model.WorkViewModel.Is_allow_split_submit" class="form-check-input" style="margin:1.25rem;" />
+                                            <label asp-for="@Model.WorkViewModel.Is_allow_split_submit" class="form-check-label" style="margin-left:3rem;"></label>
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Is_allow_split_submit" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6" hidden="hidden">
+                                    <div class="form-group" style="margin:0;">
+                                        <div class="row" style="align-items:center; display:flex;">
+                                            <input asp-for="@Model.WorkViewModel.Is_define_desource_in_operations_submit" class="form-check-input" style="margin:1.25rem;" />
+                                            <label asp-for="@Model.WorkViewModel.Is_define_desource_in_operations_submit" class="form-check-label" style="margin-left:3rem;"></label>
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Is_define_desource_in_operations_submit" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6" hidden="hidden">
+                                    <div class="form-group" style="margin:0;">
+                                        <div class="row" style="align-items:center; display:flex;">
+                                            <input asp-for="@Model.WorkViewModel.Is_enable" class="form-check-input" style="margin:1.25rem;" />
+                                            <label asp-for="@Model.WorkViewModel.Is_enable" class="form-check-label" style="margin-left:3rem;"></label>
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Is_enable" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row" hidden="hidden">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Create_by" class="edit-label col-6"></label>
+                                            <input asp-for="@Model.WorkViewModel.Create_by" class="form-control col-6" readonly="readonly" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Create_by" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <span asp-validation-for="@Model.WorkViewModel.Create_date" class="text-danger"></span>
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Create_date" class="edit-label col-6"></label>
+                                            <input asp-for="@Model.WorkViewModel.Create_date" class="form-control col-6" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" hidden="hidden">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Last_update_by" class="edit-label col-6"></label>
+                                            <input asp-for="@Model.WorkViewModel.Last_update_by" class="form-control col-6" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Last_update_by" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label asp-for="@Model.WorkViewModel.Last_update_date" class="edit-label col-6"></label>
+                                            <input asp-for="@Model.WorkViewModel.Last_update_date" class="form-control col-6" />
+                                        </div>
+                                        <span asp-validation-for="@Model.WorkViewModel.Last_update_date" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right">
+                            <a type="button" class="btn btn-secondary" asp-controller="Job" asp-action="Index">@sharedLocalizer["cancel"]</a>
+                            <button type="submit" class="btn btn-primary" name="SaveCreateJob"
+                                    asp-controller="Job" asp-action="CreateJob">
+                                @sharedLocalizer["save"]
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="SelectItemModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-xl" role="document" style="max-width:1024px;overflow-x:auto;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">@localizer["select_item_title"]</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>X</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="partialSelectItem">
+                    @await Html.PartialAsync("_SelectItemModalPartial", Model)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); } 
+    <script>
+        $.widget("custom.catcomplete", $.ui.autocomplete, {
+            _renderMenu: function (ul, items) {
+                var that = this;
+                $.each(items, function (index, item) {
+                    that._renderItemData(ul, item);
+                });
+            }
+        });
+
+        $.ui.autocomplete.prototype._renderItem = function (ul, item) {
+            var re = new RegExp(this.term, "i");
+            var t = item.label.replace(re, "<span style='font-weight:bold;color:#0CE;'>" + this.term + "</span>");
+            return $("<li></li>")
+                .data("item.autocomplete", item)
+                .append("<a>" + t + "</a>")
+                .appendTo(ul);
+        };
+
+        $("#ItemNo_filter").on('focus', function () {
+            $("#ItemNo_filter").catcomplete("search");
+        });
+    </script>
+
+    <script>
+        //show select item modal
+        $(document).on("click", 'input[id="WorkViewModel_Item_no"]', function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: "get",
+                url: "/Job/GetAllItem",
+                dataType: "html",
+                success: function (result) {
+                    $("#SelectItemModal").modal("show");
+                    $("#partialSelectItem").html(result);
+                    $(function () {
+                        $("#ItemNo_filter").catcomplete({
+                            source: function (request, response) {
+                                $.ajax({
+                                    url: "/Job/GetItem_no",
+                                    type: "POST",
+                                    dataType: "json",
+                                    data: { term: request.term },
+                                    success: function (data) {
+                                        response($.map(data, function (item) {
+                                            return { label: item.term, value: item.item_no }
+                                        }));
+                                    },
+                                });
+                            },
+                            select: function (event, ui) {
+                            },
+                            focus: function (event, ui) {
+                            },
+                            minLength: 5
+                        });
+                    });
+                    RendorSortIcon();
+                },
+                error: function () { alert('Error occurred in show select item modal.'); }
+            });
+        });
+        //show select item modal
+    </script>
+
+    <script>
+        //select item no
+        $(document).on("click", 'tr[id="ItemRow"]', function (e) {
+            e.preventDefault();
+            var no = this.getAttribute('name');
+            $.ajax({
+                type: "get",
+                url: "/Job/GetItemByNo/" + no,
+                dataType: "json",
+                success: function (data) {
+                    $.ajax({
+                        url: "/Job/GetItem_UOM/" + no,
+                        type: "POST",
+                        dataType: "json",
+                        //data: { item_no: ui.item.label },
+                        success: function (data) {
+                            $("#WorkViewModel_Scheduled_completion_quantity_uom > option").remove();
+                            var ddlSelectedProduct = $("#WorkViewModel_Scheduled_completion_quantity_uom");
+                            for (i = 0; i < data.length; i++) {
+                                ddlSelectedProduct.append($("<option/>").val(data[i].item_uom_name).text(data[i].item_uom_name));
+                            }
+                        },
+                    });
+
+                    $("#SelectItemModal").modal("hide");
+                    $("#WorkViewModel_Item_id").val(data.item_id);
+                    $("#WorkViewModel_Item_no").val(data.item_no);
+                    $("#WorkViewModel_Item_name").val(data.item_name);
+                    $("#WorkViewModel_Reserved_field02").val(data.reserved_field01);                    
+                    $("#WorkViewModel_Item_description").val(data.item_description);
+                    $("#WorkViewModel_Item_type").val(data.item_type);
+                    $("#Item_type_select").val(data.item_type);                    
+                },
+                error: function () { alert('Error occurred in select item.'); }
+            });
+        });
+        //select item no
+    </script>
+
+    <script>
+        //page item_no
+        $(document).on("click", 'a[class="atagforpage"]', function (e) {
+            e.preventDefault();
+            var url = $(this).attr('href');
+            $.ajax({
+                type: "post",
+                url: decodeURIComponent(url),
+                dataType: "html",
+                success: function (result) {
+                    $("#partialSelectItem").html(result);
+                    RendorSortIcon();
+                },
+                error: function () { alert('Error occurred in item page.'); }
+            });
+        });
+        //page item_no
+    </script>
+
+    <script>
+        //sort item_no
+        $(document).on("click", 'a[name="SortATag"]', function (e) {
+            e.preventDefault();
+            var url = $(this).attr('href');
+            $.ajax({
+                type: "post",
+                url: decodeURIComponent(url),
+                dataType: "html",
+                success: function (result) {
+                    $("#partialSelectItem").html(result);
+                    RendorSortIcon();
+                },
+                error: function () { alert('Error occurred in item sort.'); }
+            });
+        });
+        //sort item_no
+    </script>
+
+    <script>
+        //search item
+        $(document).on("click", 'button[id="SearchSubmitBtn"]', function (e) {
+            e.preventDefault();
+            var url = $(this).attr('formaction');
+            $.ajax({
+                type: "post",
+                url: decodeURIComponent(url),
+                data: $("#ItemSearchForm").serialize(),
+                dataType: "html",
+                success: function (result) {
+                    $("#partialSelectItem").html(result);
+                    RendorSortIcon();
+                },
+                error: function () { alert('Error occurred in search item.'); }
+            });
+        });
+        //search item
+    </script>
+
+    <script>
+        //rendor sort incon function
+        function RendorSortIcon() {
+            var tt = document.getElementById("item_sort_str").value;
+
+            $('a').removeClass("fas");
+            $('a').removeClass("fa-sort-asc");
+            $('a').removeClass("fa-sort-desc");
+
+            if (tt == "Item_no") {//sort item_no
+                document.getElementById("Item_no_sort_btn").classList.add("fas");
+                document.getElementById("Item_no_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Item_no") {//sort item_no
+                document.getElementById("Item_no_sort_btn").classList.add("fas");
+                document.getElementById("Item_no_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Item_name") {//sort item_name
+                document.getElementById("Item_name_sort_btn").classList.add("fas");
+                document.getElementById("Item_name_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Item_name") {//sort item_name
+                document.getElementById("Item_name_sort_btn").classList.add("fas");
+                document.getElementById("Item_name_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Item_description") {//sort Item_description
+                document.getElementById("Item_description_sort_btn").classList.add("fas");
+                document.getElementById("Item_description_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Item_description") {//sort Item_description
+                document.getElementById("Item_description_sort_btn").classList.add("fas");
+                document.getElementById("Item_description_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "On_hand_quantity") {//sort On_hand_quantity
+                document.getElementById("On_hand_quantity_sort_btn").classList.add("fas");
+                document.getElementById("On_hand_quantity_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-On_hand_quantity") {//sort On_hand_quantity
+                document.getElementById("On_hand_quantity_sort_btn").classList.add("fas");
+                document.getElementById("On_hand_quantity_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Allocated_quantity") {//sort Allocated_quantity
+                document.getElementById("Allocated_quantity_sort_btn").classList.add("fas");
+                document.getElementById("Allocated_quantity_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Allocated_quantity") {//sort Allocated_quantity
+                document.getElementById("Allocated_quantity_sort_btn").classList.add("fas");
+                document.getElementById("Allocated_quantity_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Available_quantity") {//sort Available_quantity
+                document.getElementById("Available_quantity_sort_btn").classList.add("fas");
+                document.getElementById("Available_quantity_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Available_quantity") {//sort Available_quantity
+                document.getElementById("Available_quantity_sort_btn").classList.add("fas");
+                document.getElementById("Available_quantity_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Safety_stock_quantity") {//sort Safety_stock_quantity
+                document.getElementById("Safety_stock_quantity_sort_btn").classList.add("fas");
+                document.getElementById("Safety_stock_quantity_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Safety_stock_quantity") {//sort Safety_stock_quantity
+                document.getElementById("Safety_stock_quantity_sort_btn").classList.add("fas");
+                document.getElementById("Safety_stock_quantity_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Minimum_order_quantity") {//sort Minimum_order_quantity
+                document.getElementById("Minimum_order_quantity_sort_btn").classList.add("fas");
+                document.getElementById("Minimum_order_quantity_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Minimum_order_quantity") {//sort Minimum_order_quantity
+                document.getElementById("Minimum_order_quantity_sort_btn").classList.add("fas");
+                document.getElementById("Minimum_order_quantity_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Scheduled_completion_quantity_uom") {//sort Scheduled_completion_quantity_uom
+                document.getElementById("Scheduled_completion_quantity_uom_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_quantity_uom_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Scheduled_completion_quantity_uom") {//sort Scheduled_completion_quantity_uom
+                document.getElementById("Scheduled_completion_quantity_uom_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_quantity_uom_sort_btn").classList.add("fa-sort-desc");
+            }
+        };
+        //rendor sort incon function
+    </script>
+}

@@ -1,0 +1,74 @@
+﻿@page
+
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@model RegisterModel
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+@{
+    ViewData["Title"] = @sharedLocalizer["register_title"];
+    Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="col-md-10 offset-md-1">
+    <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>@sharedLocalizer["user_name"]</label>
+                    <input asp-for="Input.Name" class="form-control" />
+                    <span asp-validation-for="Input.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>@sharedLocalizer["ChinessName"]</label>
+                    <input asp-for="Input.ChinessName" class="form-control" />
+                    <span asp-validation-for="Input.ChinessName" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>@sharedLocalizer["email"]</label>
+                    <input asp-for="Input.Email" class="form-control" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>@sharedLocalizer["role"]</label>
+                    <select asp-for="Input.Account_role_type" asp-items="@Model.RoleList" class="form-control dropdown-style"></select>
+                    <span asp-validation-for="Input.Account_role_type" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>@sharedLocalizer["password"]</label>
+                    <input asp-for="Input.Password" class="form-control" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>@sharedLocalizer["confirm_password"]</label>
+                    <input asp-for="Input.ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">@sharedLocalizer["register_title"]</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,65 @@
+﻿@model ReflectionIT.Mvc.Paging.IPagingList
+@* Fake Boostrap 5 based pager *@
+
+@{
+    var start = this.Model.StartPageIndex;
+    var stop = this.Model.StopPageIndex;
+}
+
+@if (this.Model.PageCount > 1)
+{
+    <ul class="pagination pagination-sm justify-content-end">
+
+        @if (start > 1)
+        {
+            <li>
+                <a class="atagforpage" href="@Url.Action(this.Model.Action, this.Model.GetRouteValueForPage(1))" aria-label="First">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+        }
+
+        @if (this.Model.PageIndex > 1)
+        {
+            <li>
+                <a class="atagforpage" href="@Url.Action(this.Model.Action, this.Model.GetRouteValueForPage(this.Model.PageIndex - 1))" aria-label="Previous">
+                    <span aria-hidden="true">&lsaquo;</span>
+                </a>
+            </li>
+        }
+
+        @for (int i = start; i <= stop; i++)
+        {
+            <li class=" @((this.Model.PageIndex == i) ? "active" : null)">
+                @if (i == 1)
+                {
+                    @Html.ActionLink(i.ToString(), this.Model.Action, this.Model.GetRouteValueForPage(i), new { @class = "atagforpage" })
+                }
+                else
+                {
+                    @Html.ActionLink(i.ToString(), this.Model.Action, this.Model.GetRouteValueForPage(i), new { @class = "atagforpage" })
+                }
+
+            </li>
+        }
+
+        @if (this.Model.PageIndex < this.Model.PageCount)
+        {
+            <li>
+                <a class="atagforpage" href="@Url.Action(this.Model.Action, this.Model.GetRouteValueForPage(this.Model.PageIndex + 1))" aria-label="Next">
+                    <span aria-hidden="true">&rsaquo;</span>
+                </a>
+            </li>
+        }
+
+        @if (stop < this.Model.PageCount)
+        {
+            <li>
+                <a class="atagforpage" href="@Url.Action(this.Model.Action, this.Model.GetRouteValueForPage(this.Model.PageCount))" aria-label="Last">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        }
+
+    </ul>
+}

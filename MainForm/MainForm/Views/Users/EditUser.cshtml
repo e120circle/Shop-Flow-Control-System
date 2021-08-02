@@ -1,0 +1,108 @@
+﻿@using SQLClass.Models.Users
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@model MainForm.ViewModels.Users.UsersViewModel
+
+@inject IViewLocalizer localizer
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+@{
+    ViewBag.Title = "編輯工單主檔";
+}
+
+<div class="modal-content ScreenOnly" style="background-color:#F2EEE5;border:0px;padding-top:90px;">
+    <div class="col-lg-12" style="padding:0;">
+        <form method="post" id="EditUserForm">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row card-title">
+                        <h3 class="text-center title-2 col-8">@localizer["page_title"]</h3>
+                    </div>
+                </div>
+                <div class="card-body" style="padding-left:20px; padding-right:20px;">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.UserViewModel.Name" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                <input asp-for="@Model.UserViewModel.Name" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" readonly="readonly" />
+                            </div>
+                            <span asp-validation-for="@Model.UserViewModel.Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.UserViewModel.ChinessName" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                <input asp-for="@Model.UserViewModel.ChinessName" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+                            </div>
+                            <span asp-validation-for="@Model.UserViewModel.ChinessName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.UserViewModel.Groupe" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                <select asp-for="@Model.UserViewModel.Groupe" asp-items="@Model.GroupeList" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7"></select>
+                            </div>
+                            <span asp-validation-for="@Model.UserViewModel.Groupe" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.UserViewModel.Accout_role_type" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                <select asp-for="@Model.UserViewModel.Accout_role_type" asp-items="@Model.AccountRoleTypeList" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7"></select>
+                                <input asp-for="@Model.UserViewModel.Accout_role_type" hidden="hidden" />
+                            </div>
+                            <span asp-validation-for="@Model.UserViewModel.Accout_role_type" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.UserViewModel.Email" class="edit-label col-sm-3 col-md-3 col-lg-5 col-xl-5 postfix"></label>
+                                <input asp-for="@Model.UserViewModel.Email" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+                            </div>
+                            <span asp-validation-for="@Model.UserViewModel.Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-right">
+                    <a type="button" class="btn btn-secondary" asp-controller="Users" asp-action="Index">@sharedLocalizer["cancel"]</a>
+                    <button type="button" class="btn btn-danger" name="DeleteJob" hidden="hidden"
+                            asp-controller="Job" asp-action="DeleteJob" asp-route-no="@Model.UserViewModel.Name">
+                        @sharedLocalizer["delete"]
+                    </button>
+                    <button type="button" class="btn btn-primary" name="SaveEditUser"
+                            asp-controller="Users" asp-action="EditUser" asp-route-name="@Model.UserViewModel.Name">
+                        @sharedLocalizer["save"]
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+    <script>
+        //save edit user
+        $(document).on("click", 'button[name="SaveEditUser"]', function (e) {
+            e.preventDefault();
+            var url = $(this).attr('formaction');
+            $.ajax({
+                type: "post",
+                url: decodeURIComponent(url),
+                dataType: "html",
+                data: $("#EditUserForm").serialize(),
+                success: function (result) {
+                    //$("#partialEditJob").html(result);
+                    alert("Update success.")
+                },
+                error: function () { alert('Error occurred in save edit user.'); }
+            });
+        });
+        //save edit job
+    </script>
+}

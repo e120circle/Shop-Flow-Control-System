@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+
+@model MainForm.ViewModels.Operations.OperationsViewModel
+
+@inject IViewLocalizer localizer
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+<table class="responstable">
+    <thead>
+        <tr>
+            <th>
+                <label asp-for="@Model.DetailViewModel.Operations_resource_no">@localizer["tool_no"]</label>
+            </th>
+            <th>
+                <label asp-for="@Model.DetailViewModel.Operations_resource_description">@localizer["tool_description"]</label>
+            </th>
+            <th>
+                <label asp-for="@Model.DetailViewModel.Reserved_field01">@localizer["tool_quantity"]</label>
+            </th>
+            <th style="padding-left:0.5rem; padding-right:0.5rem;">@sharedLocalizer["function"]</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tool in @Model.ToolDetailList)
+        {
+        <tr>
+            <td>
+                <input asp-for="@tool.Operations_resource_no" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" readonly="readonly" />
+            </td>
+            <td>
+                <input asp-for="@tool.Operations_resource_description" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" readonly="readonly"/>
+            </td>
+            <td>
+                <input asp-for="@tool.Reserved_field01" class="form-control col-sm-4 col-md-6 col-lg-7 col-xl-7" />
+            </td>
+            <td>
+                <div class="row">
+                    <button type="button" class="btn btn-danger waves-effect" id="DelToolBtn"
+                            asp-controller="Operations" asp-action="RemoveSelectTool"
+                            asp-route-no="@tool.Operations_resource_no">
+                        @sharedLocalizer["delete"]
+                    </button>
+                </div>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

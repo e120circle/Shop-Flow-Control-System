@@ -1,0 +1,308 @@
+﻿@using SQLClass.Models.Job
+@using ReflectionIT.Mvc.Paging
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@addTagHelper *, ReflectionIT.Mvc.Paging
+@inject IViewLocalizer localizer
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+@*@model ReflectionIT.Mvc.Paging.PagingList<MainForm.ViewModels.Job.JobViewModel>*@
+@model MainForm.ViewModels.Job.JobViewModel
+
+@section AddToHead{
+    @*<link href="~/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/SettingMaterial.css" rel="stylesheet" />*@
+}
+
+@{
+    ViewBag.Title = @localizer["page_title"];
+    //材質,客戶代號,客戶品號,流程,UOM
+    //item column
+}
+
+<div calss="container" style="padding-top:90px;">
+    <div class="row" style="margin-right:10px; margin-left:10px">
+        <h3 style="margin:auto">@localizer["page_title"]</h3>
+    </div>
+    <div class="container" style="padding:0px">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="overflow-x:auto;">
+            @*<nav aria-label="Page navigation example">
+                    @await this.Component.InvokeAsync("Pager", new { pagingList = this.Model.JobListInPaging })
+                </nav>*@
+            <div class="row col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-top:5px;">
+                <div class="col-sm-12 col-md-12 col-lg-5 col-xl-4" style="padding-left:0;">
+                    @await this.Component.InvokeAsync("Pager", new { pagingList = this.Model.JobListInPaging })
+                </div>
+                <form method="post" class="col-sm-12 col-md-12 col-lg-7 col-xl-8">
+                    <div class="row" style="overflow:auto;">
+                        <input name="Job_no_filter" class="form-control col-sm-12 col-md-3 col-lg-3 col-xl-2" placeholder="@localizer["search_Job_no"]"
+                               value="@Model.JobListInPaging.RouteValue["Job_no_filter"]" style="margin-left:5px;margin-right:5px;width:100%;" />
+                        <input name="Item_no_filter" class="form-control col-sm-12 col-md-3 col-lg-3 col-xl-2" placeholder="@localizer["search_Item_no"]"
+                               value="@Model.JobListInPaging.RouteValue["Item_no_filter"]" style="margin-left:5px;margin-right:5px;width:100%;" />
+                        <select name="Job_status_filter" asp-items="@Model.JobStatusList" class="form-control col-sm-12 col-md-3 col-lg-3 col-xl-2"
+                                style="margin-left:5px;margin-right:5px;width:100%;">
+                            <option value="0">@localizer["search_Job_status"]</option>
+                        </select>
+                        <button type="submit" class="btn btn-info btn-search col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            @sharedLocalizer["search"]
+                        </button>
+                        <a type="button" class="btn btn-primary col-sm-12 col-md-3 col-lg-3 col-xl-2" asp-controller="Job" asp-action="CreateJob"
+                           style="margin-left:5px;margin-bottom:10px;width:100%;">
+                            <i class="fas fa-file-alt"></i>
+                            @sharedLocalizer["create"]
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <input hidden="hidden" id="sort_str" value="@Model.Sort_str" />
+            <table class="responstable">
+                <thead>
+                    <tr>
+                        <th>
+                            @if (Model.Sort_str == "-Job_no")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Job_no" id="Job_no_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Job_no"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Job_no" id="Job_no_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Job_no"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Job_source_type")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Job_source_type" id="Job_source_type_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Job_source_type"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Job_source_type" id="Job_source_type_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Job_source_type"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Job_status")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Job_status" id="Job_status_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Job_status"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Job_status" id="Job_status_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Job_status"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Item_no")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Item_no" id="Item_no_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Item_no"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Item_no" id="Item_no_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Item_no"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Item_name")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Item_name" id="Item_name_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Item_name"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Item_name" id="Item_name_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Item_name"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Job_released_date")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Job_released_date" id="Job_released_date_sort_btn">
+
+                                    <label asp-for="@Model.WorkViewModel.Job_released_date"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Job_released_date" id="Job_released_date_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Job_released_date"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Scheduled_completion_date")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Scheduled_completion_date" id="Scheduled_completion_date_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Scheduled_completion_date"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Scheduled_completion_date" id="Scheduled_completion_date_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Scheduled_completion_date"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Scheduled_completion_quantity")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Scheduled_completion_quantity" id="Scheduled_completion_quantity_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Scheduled_completion_quantity"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Scheduled_completion_quantity" id="Scheduled_completion_quantity_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Scheduled_completion_quantity"></label>
+                                </a>
+                            }
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Scheduled_completion_quantity_uom")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Scheduled_completion_quantity_uom" id="Scheduled_completion_quantity_uom_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Scheduled_completion_quantity_uom"></label>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Scheduled_completion_quantity_uom" id="Scheduled_completion_quantity_uom_sort_btn">
+                                    <label asp-for="@Model.WorkViewModel.Scheduled_completion_quantity_uom"></label>
+                                </a>
+                            }
+                        </th>
+                        <th style="padding-left:0.5rem; padding-right:0.5rem; color:white;">@sharedLocalizer["function"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var job in @Model.JobListInPaging)
+                    {
+                        <tr>
+                            <td>@job.Job_no</td>
+                            <td>@job.Job_source_type</td>
+                            <td>@Model.JobStatusList[job.Job_status - 1].Text</td>
+                            <td>@job.Item_no</td>
+                            <td>@job.Item_name</td>
+                            <td>@((job.Job_released_date.HasValue) ? job.Job_released_date.Value.ToString("d") : "--")</td>
+                            <td>@((job.Scheduled_completion_date.HasValue) ? job.Scheduled_completion_date.Value.Date.ToString("d") : "--")</td>
+                            <td>@job.Scheduled_completion_quantity</td>
+                            <td>@job.Scheduled_completion_quantity_uom</td>
+                            <td>
+                                <a type="button" class="btn btn-primary btn-rounded waves-effect" name="ShowEditJob"
+                                   style="float:right; padding-left:0.5rem; padding-right:0.5rem;"
+                                   asp-controller="Job" asp-action="EditJob" asp-route-no="@job.Job_no">
+                                    <i class="fas fa-edit"></i>
+                                    @sharedLocalizer["edit"]
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <nav aria-label="Suppliers navigation example">
+                <vc:pager paging-list="@Model.JobListInPaging" />
+            </nav>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            var tt = document.getElementById("sort_str").value;
+
+            $('a').removeClass("fas");
+            $('a').removeClass("fa-sort-asc");
+            $('a').removeClass("fa-sort-desc");
+
+            if (tt == "Job_no") {//sort job_no
+                document.getElementById("Job_no_sort_btn").classList.add("fas");
+                document.getElementById("Job_no_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Job_no") {//sort job_no
+                document.getElementById("Job_no_sort_btn").classList.add("fas");
+                document.getElementById("Job_no_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Job_source_type") {//sort Job_source_type
+                document.getElementById("Job_source_type_sort_btn").classList.add("fas");
+                document.getElementById("Job_source_type_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Job_source_type") {//sort Job_source_type
+                document.getElementById("Job_source_type_sort_btn").classList.add("fas");
+                document.getElementById("Job_source_type_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Job_status") {//sort Job_status
+                document.getElementById("Job_status_sort_btn").classList.add("fas");
+                document.getElementById("Job_status_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Job_status") {//sort Job_status
+                document.getElementById("Job_status_sort_btn").classList.add("fas");
+                document.getElementById("Job_status_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Item_no") {//sort item_no
+                document.getElementById("Item_no_sort_btn").classList.add("fas");
+                document.getElementById("Item_no_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Item_no") {//sort item_no
+                document.getElementById("Item_no_sort_btn").classList.add("fas");
+                document.getElementById("Item_no_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Item_name") {//sort Item_name
+                document.getElementById("Item_name_sort_btn").classList.add("fas");
+                document.getElementById("Item_name_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Item_name") {//sort Item_name
+                document.getElementById("Item_name_sort_btn").classList.add("fas");
+                document.getElementById("Item_name_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Scheduled_completion_date") {//sort Scheduled_completion_date
+                document.getElementById("Scheduled_completion_date_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_date_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Scheduled_completion_date") {//sort Scheduled_completion_date
+                document.getElementById("Scheduled_completion_date_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_date_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Job_released_date") {//sort Job_released_date
+                document.getElementById("Job_released_date_sort_btn").classList.add("fas");
+                document.getElementById("Job_released_date_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Job_released_date") {//sort Job_released_date
+                document.getElementById("Job_released_date_sort_btn").classList.add("fas");
+                document.getElementById("Job_released_date_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Scheduled_completion_quantity") {//sort Scheduled_completion_quantity
+                document.getElementById("Scheduled_completion_quantity_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_quantity_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Scheduled_completion_quantity") {//sort Scheduled_completion_quantity
+                document.getElementById("Scheduled_completion_quantity_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_quantity_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Scheduled_completion_quantity_uom") {//sort Scheduled_completion_quantity_uom
+                document.getElementById("Scheduled_completion_quantity_uom_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_quantity_uom_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Scheduled_completion_quantity_uom") {//sort Scheduled_completion_quantity_uom
+                document.getElementById("Scheduled_completion_quantity_uom_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_quantity_uom_sort_btn").classList.add("fa-sort-desc");
+            }
+        });
+    </script>
+}

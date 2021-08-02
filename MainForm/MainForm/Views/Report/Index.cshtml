@@ -1,0 +1,132 @@
+﻿@using SQLClass.Models.Job
+@using ReflectionIT.Mvc.Paging
+@addTagHelper *, ReflectionIT.Mvc.Paging
+
+@model MainForm.ViewModels.Report.ReportViewModel
+
+@section AddToHead{
+    @*<link href="~/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/SettingMaterial.css" rel="stylesheet" />*@
+}
+
+@{
+    ViewBag.Title = "每日產值表";
+}
+
+<div class="container" style="padding-top:90px;">
+    <div class="row" style="margin-right:10px; margin-left:10px">
+        <h3 style="margin:auto">每日產值表</h3>
+    </div>
+    <div class="container mt-3" style="padding:0px">
+        <div class="col-lg-12" style="overflow-x:auto;">
+            <form method="post" id="FilterForm">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                    <select multiple="multiple"
+                            asp-for="@Model.Operations_resource_filter"
+                            asp-items="@(new MultiSelectList(Model.OperationsResourceFilterList, "Value", "Text"))"
+                            class="form-control col-12">
+                        <option value="0"></option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <input type="date" name="Actually_start_date_start_filter" class="form-control col-12" placeholder="搜尋日期區間"
+                               @*value="@Model.Actually_start_date_filter.Value.ToString("d")" />*@
+                               value="@(Model.Actually_start_date_start_filter.HasValue ? @Model.Actually_start_date_start_filter.Value.ToString("yyyy-MM-dd") : "--/--/----")" />
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <input type="date" name="Actually_start_date_end_filter" class="form-control col-12" placeholder="搜尋日期區間"
+                               @*value="@Model.Actually_start_date_filter.Value.ToString("d")" />*@
+                               value="@(Model.Actually_start_date_end_filter.HasValue ? @Model.Actually_start_date_end_filter.Value.ToString("yyyy-MM-dd") : "--/--/----")" />
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <input name="Item_no_filter" class="form-control col-12" placeholder="搜尋貨品編號"
+                               value="@Model.Item_no_filter" />
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <input name="Customer_no_filter" class="form-control col-12" placeholder="搜尋客戶編號"
+                               value="@Model.Customer_no_filter" />
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <button type="submit" class="btn btn-info form-control col-12" name="GetSearch" asp-controller="Report" asp-action="Index" style="text-align:center;">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search
+                        </button>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <button type="submit" class="btn btn-info form-control col-12" name="GetExport" asp-controller="Report" asp-action="GetExport" style="text-align:center;">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> 匯出報表
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <input id="sort_str" value="@Model.Sort_str" />
+            <table class="responstable">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>時間</th>
+                        <th>機台</th>
+                        <th>客戶</th>
+                        <th>貨品編號</th>
+                        <th>貨品名稱</th>
+                        <th>貨品說明</th>
+                        <th>鑄件商及採單</th>
+                        <th>領料數量</th>
+                        <th>良品</th>
+                        <th>不良品</th>
+                        <th>加工內容</th>
+                        <th>刀具耗用(0/角)</th>
+                        <th>刀具耗用(△/角)</th>
+                        <th>刀具耗用(◇/角)</th>
+                        <th>刀具耗用(/角)</th>
+                        <th>作業人員</th>
+                        <th>材料重量</th>
+                        <th>加工完重量</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var report in @Model.ReportList)
+                    {
+                    <tr>
+                        <td>@((report.Submit.Actually_start_date.HasValue) ? report.Submit.Actually_start_date.Value.ToString("d") : "--")</td>
+                        <td>@Model.SubmitTypeList.Find(x => x.Value == report.Submit.Operations_submit_type.ToString()).Text<br>@report.Total_time.ToString("0.0")</td>
+                        <td>(@report.MachineDetail.Operations_resource_no)@report.MachineDetail.Operations_resource_name</td>
+                        <td>@report.Job.Customer_no</td>
+                        <td>@report.Job.Item_no</td>
+                        <td>@report.Job.Item_name</td>
+                        <td>@report.Job.Item_description</td>
+                        <td>@report.Job.Reserved_field01</td>
+                        <td>@report.Submit.Scheduled_completion_quantity</td>
+                        <td>@report.Submit.Actually_completion_quantity</td>
+                        <td>@report.Submit.Actually_defective_quantity</td>
+                        <td>@report.Routing.Routing_name</td>
+                        @foreach (var tool in report.ToolDetailList)
+                        {
+                            <td>
+                                @{
+                                    var fullName = tool.Operations_resource_name + "/" + tool.Reserved_field01;
+                                    @Html.DisplayFor(m => fullName)
+                                }
+                            </td>
+                        }
+                        @for (int i = 0; i < 4 - report.ToolDetailList.Count; i++)
+                        {
+                            <td></td>
+                        }
+                        <td>@report.Submit.Operator_id</td>
+                        <td>@report.Submit.Reserved_field01</td>
+                        <td>@report.Submit.Reserved_field02</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+            @*<div style="text-align:center;">
+                <nav aria-label="Suppliers navigation example">
+                    <vc:pager paging-list="@Model.ReportListInPaging" />
+                </nav>
+            </div>*@
+        </div>
+    </div>
+</div>

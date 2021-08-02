@@ -1,0 +1,856 @@
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.csprojAssemblyReference.cache
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.AssemblyInfoInputs.cache
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.AssemblyInfo.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.RazorAssemblyInfo.cache
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.RazorAssemblyInfo.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/appsettings.Development.json
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/appsettings.json
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Properties/serviceDependencies.json
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Properties/serviceDependencies.local.json
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.StaticWebAssets.xml
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.exe
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/nlog.config
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.deps.json
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.runtimeconfig.json
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.runtimeconfig.dev.json
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.pdb
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.Views.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.Views.pdb
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/AutoMapper.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/BouncyCastle.Crypto.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Google.Protobuf.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/K4os.Compression.LZ4.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/K4os.Compression.LZ4.Streams.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/K4os.Hash.xxHash.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.Internal.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Razor.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.FileProviders.Abstractions.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.FileProviders.Embedded.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Core.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Stores.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/MySql.Data.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Ubiety.Dns.Core.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Zstandard.Net.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/MySql.Data.EntityFrameworkCore.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/MySqlConnector.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/NLog.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/NLog.Extensions.Logging.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/NLog.Web.AspNetCore.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/NuGet.Frameworks.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Pomelo.EntityFrameworkCore.MySql.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Pomelo.JsonObject.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Renci.SshNet.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/SshNet.Security.Cryptography.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Composition.AttributedModel.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Composition.Convention.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Composition.Hosting.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Composition.Runtime.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Composition.TypedParts.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Xml.XPath.XmlDocument.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/SQLClass.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.TagHelpers.input.cache
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.TagHelpers.output.cache
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.RazorCoreGenerate.cache
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Login.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Register.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/_ViewImports.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_AuthLayout.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewImports.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Analysis/Index.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Employee/Manage.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Employee/_EditEmployeeGroupPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Employee/_EditEmployeePartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Employee/_EmployeeGroupManagePartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Employee/_EmployeeManagePartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Live/Index.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Machine/Base.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Material/Manage.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Material/_EditMaterialPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Material/_MaterialManagePartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Setting/Machine.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Setting/Repository.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.RazorTargetAssemblyInfo.cache
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.RazorTargetAssemblyInfo.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Views.pdb
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.csproj.CopyComplete
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/staticwebassets/MainForm.StaticWebAssets.Manifest.cache
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/staticwebassets/MainForm.StaticWebAssets.xml
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.pdb
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.genruntimeconfig.cache
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/RolesAdmin/Create.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/RolesAdmin/Index.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/RolesAdmin/Update.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/RoutingResource/CreateRoutingResource.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/RoutingResource/EditRoutingResource.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/RoutingResource/Index.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/EditJob.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/CreateJob.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/QRCoder.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.JsonPatch.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/_CreateRoutingModalPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/_EditRoutingModalPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/_RoutingListPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/_EditJobPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/_CreateJobPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Operations/Index.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Operations/_EditOperationsModalPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Operations/_OperationsListPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Workstation/Index.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Workstation/EditStation.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Workstation/CreateStation.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Workstation/_StationResourceListPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Workstation/_EditStationResourceModalPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Workstation/_EditStationPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Workstation/_CreateStationResourceModalPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Workstation/_CreateStationPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/CreateBusinessUnit.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/CreateCompany.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/CreateFactory.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/EditBusinessUnit.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/EditCompany.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/EditFactory.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/Index.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/_FactoryPartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Components/Pager/pagination.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ReflectionIT.Mvc.Paging.Views.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/ReflectionIT.Mvc.Paging.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/Index.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-TW/MainForm.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job.Index.zh-TW.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.csproj.GenerateResource.cache
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/zh-TW/MainForm.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/bin/Debug/netcoreapp3.1/en-US/MainForm.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job.Index.en-US.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/en-US/MainForm.resources.dll
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Job.WorkViewModel.en-US.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Job.WorkViewModel.zh-TW.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.csproj.CoreCompileInputs.cache
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.MvcApplicationPartsAssemblyInfo.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.MvcApplicationPartsAssemblyInfo.cache
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.SharedResource.en-US.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.SharedResource.zh-TW.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_CulturePartial.cshtml.g.cs
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job.CreateJob.en-US.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job.CreateJob.zh-TW.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job._CreateJobPartial.en-US.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job._CreateJobPartial.zh-TW.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job.EditJob.en-US.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job.EditJob.zh-TW.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job._EditJobPartial.en-US.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job._EditJobPartial.zh-TW.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Job.RoutingViewModel.en-US.resources
+D:/PMC/2020.07 MainForm/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Job.RoutingViewModel.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/appsettings.Development.json
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/appsettings.json
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.StaticWebAssets.xml
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/nlog.config
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.deps.json
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.runtimeconfig.json
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.runtimeconfig.dev.json
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.pdb
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/en-US/MainForm.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-TW/MainForm.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.Views.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/MainForm.Views.pdb
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/AutoMapper.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/BouncyCastle.Crypto.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Google.Protobuf.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/K4os.Compression.LZ4.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/K4os.Compression.LZ4.Streams.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/K4os.Hash.xxHash.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.JsonPatch.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Razor.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.FileProviders.Embedded.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Core.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Stores.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/MySql.Data.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Ubiety.Dns.Core.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Zstandard.Net.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/MySql.Data.EntityFrameworkCore.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/MySqlConnector.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/NETCoreBarcode.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/NLog.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/NLog.Extensions.Logging.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/NLog.Web.AspNetCore.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/NuGet.Frameworks.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Pomelo.EntityFrameworkCore.MySql.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Pomelo.JsonObject.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/QRCoder.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ReflectionIT.Mvc.Paging.Views.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ReflectionIT.Mvc.Paging.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/Renci.SshNet.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/SshNet.Security.Cryptography.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Composition.AttributedModel.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Composition.Convention.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Composition.Hosting.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Composition.Runtime.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Composition.TypedParts.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/System.Xml.XPath.XmlDocument.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/SQLClass.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.csprojAssemblyReference.cache
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.SharedResource.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.SharedResource.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Item.ItemViewModel.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Item.ItemViewModel.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Job.RoutingViewModel.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Job.RoutingViewModel.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Job.WorkViewModel.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Job.WorkViewModel.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Operations.OperationsDetailViewModel.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Operations.OperationsDetailViewModel.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Operations.OperationsSubmitViewModel.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Operations.OperationsSubmitViewModel.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job.CreateJob.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job.CreateJob.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job.EditJob.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job.EditJob.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job.Index.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job.Index.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job._CreateJobPartial.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job._CreateJobPartial.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job._EditJobPartial.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job._EditJobPartial.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job._SelectItemModalPartial.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Job._SelectItemModalPartial.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Operations.Finish.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Operations.Finish.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Operations.Start.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Operations.Start.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.csproj.GenerateResource.cache
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.AssemblyInfoInputs.cache
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.AssemblyInfo.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.csproj.CoreCompileInputs.cache
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.MvcApplicationPartsAssemblyInfo.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.MvcApplicationPartsAssemblyInfo.cache
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.RazorAssemblyInfo.cache
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.RazorAssemblyInfo.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/en-US/MainForm.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/zh-TW/MainForm.resources.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/staticwebassets/MainForm.StaticWebAssets.Manifest.cache
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/staticwebassets/MainForm.StaticWebAssets.xml
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/scopedcss/bundle/MainForm.styles.css
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.TagHelpers.input.cache
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.TagHelpers.output.cache
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.RazorCoreGenerate.cache
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Login.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Register.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/_ViewImports.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_AuthLayout.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewImports.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Analysis/Index.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/CreateJob.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/EditJob.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/Index.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/_CreateRoutingModalPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/_EditJobPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/_EditRoutingModalPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/_RoutingListPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Job/_SelectItemModalPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Operations/CreateOperations.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Operations/EditOperations.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Operations/Finish.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Operations/Start.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Operations/_EditOperationsPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Operations/_SelectMachineModalPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Operations/_SelectMachinePartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Operations/_SelectToolModalPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Operations/_SelectToolPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/OperationsResource/CreateRoutingResource.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/OperationsResource/EditRoutingResource.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/OperationsResource/Index.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/CreateBusinessUnit.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/CreateCompany.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/CreateFactory.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/EditBusinessUnit.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/EditCompany.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/EditFactory.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/Index.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Organize/_FactoryPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/RolesAdmin/Create.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/RolesAdmin/Index.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/RolesAdmin/Update.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Setting/Machine.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Setting/Repository.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Components/Pager/pagination.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_CulturePartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.RazorTargetAssemblyInfo.cache
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.RazorTargetAssemblyInfo.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Views.pdb
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.csproj.CopyComplete
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.pdb
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.genruntimeconfig.cache
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Organize.CompanyViewModel.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Organize.CompanyViewModel.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Organize.BusinessUnitViewModel.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Organize.BusinessUnitViewModel.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Organize.FactoryViewModel.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.ViewModels.Organize.FactoryViewModel.zh-TW.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/NPOI.OOXML.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/NPOI.OpenXml4Net.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/NPOI.OpenXmlFormats.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/NPOI.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/bin/Debug/netcoreapp3.1/ICSharpCode.SharpZipLib.dll
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/Razor/Views/Report/Index.cshtml.g.cs
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Home.Index.en-US.resources
+/Users/pinyi/Projects/mainform/MainForm/MainForm/obj/Debug/netcoreapp3.1/MainForm.Resources.Views.Home.Index.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\appsettings.json
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\MainForm.StaticWebAssets.xml
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\MainForm.exe
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\nlog.config
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\MainForm.deps.json
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\MainForm.runtimeconfig.json
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\MainForm.runtimeconfig.dev.json
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\MainForm.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\MainForm.pdb
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\en-US\MainForm.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\zh-TW\MainForm.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\MainForm.Views.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\MainForm.Views.pdb
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\MySql.Data.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Zstandard.Net.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\MySql.Data.EntityFrameworkCore.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\NETCoreBarcode.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\NLog.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\NPOI.OOXML.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\NPOI.OpenXml4Net.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\NPOI.OpenXmlFormats.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\NPOI.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\QRCoder.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ReflectionIT.Mvc.Paging.Views.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ReflectionIT.Mvc.Paging.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ICSharpCode.SharpZipLib.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\Renci.SshNet.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\SshNet.Security.Cryptography.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\SQLClass.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.SharedResource.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.SharedResource.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Item.ItemViewModel.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Item.ItemViewModel.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Job.RoutingViewModel.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Job.RoutingViewModel.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Job.WorkViewModel.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Job.WorkViewModel.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Operations.OperationsDetailViewModel.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Operations.OperationsDetailViewModel.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Operations.OperationsSubmitViewModel.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Operations.OperationsSubmitViewModel.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Organize.BusinessUnitViewModel.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Organize.BusinessUnitViewModel.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Organize.CompanyViewModel.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Organize.CompanyViewModel.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Organize.FactoryViewModel.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Organize.FactoryViewModel.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Home.Index.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Home.Index.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Job.CreateJob.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Job.CreateJob.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Job.EditJob.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Job.EditJob.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Job.Index.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Job.Index.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Job._SelectItemModalPartial.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Job._SelectItemModalPartial.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations.Finish.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations.Finish.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations.Start.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations.Start.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.csproj.GenerateResource.cache
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.AssemblyInfoInputs.cache
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.AssemblyInfo.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.csproj.CoreCompileInputs.cache
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.MvcApplicationPartsAssemblyInfo.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.MvcApplicationPartsAssemblyInfo.cache
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.RazorAssemblyInfo.cache
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.RazorAssemblyInfo.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\en-US\MainForm.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\zh-TW\MainForm.resources.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\staticwebassets\MainForm.StaticWebAssets.Manifest.cache
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\staticwebassets\MainForm.StaticWebAssets.xml
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\scopedcss\bundle\MainForm.styles.css
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.TagHelpers.input.cache
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.TagHelpers.output.cache
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.RazorCoreGenerate.cache
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_AuthLayout.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Job\CreateJob.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Job\EditJob.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Job\Index.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Job\_CreateRoutingModalPartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Job\_EditRoutingModalPartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Job\_RoutingListPartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Job\_SelectItemModalPartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\OperationsResource\CreateRoutingResource.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\OperationsResource\EditRoutingResource.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\OperationsResource\Index.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Operations\CreateOperations.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Operations\EditOperations.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Operations\Finish.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Operations\Start.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Operations\_SelectMachineModalPartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Operations\_SelectMachinePartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Operations\_SelectToolModalPartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Operations\_SelectToolPartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Organize\CreateBusinessUnit.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Organize\CreateCompany.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Organize\CreateFactory.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Organize\EditBusinessUnit.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Organize\EditCompany.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Organize\EditFactory.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Organize\Index.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Organize\_FactoryPartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Report\Index.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\RolesAdmin\Create.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\RolesAdmin\Index.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\RolesAdmin\Update.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Setting\Machine.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Setting\Repository.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Pager\pagination.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CulturePartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.RazorTargetAssemblyInfo.cache
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.RazorTargetAssemblyInfo.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Views.pdb
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.csproj.CopyComplete
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.dll
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.pdb
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.genruntimeconfig.cache
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.csprojAssemblyReference.cache
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations.CreateOperations.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations.CreateOperations.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations._SelectMachinePartial.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations._SelectMachinePartial.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations.EditOperations.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations.EditOperations.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations._SelectToolPartial.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations._SelectToolPartial.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations._SelectMachineModalPartial.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations._SelectMachineModalPartial.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations._SelectToolModalPartial.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Operations._SelectToolModalPartial.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\wwwroot\js\site.js
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\wwwroot\lib\jquery\dist\jquery.js
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\bin\Debug\netcoreapp3.1\wwwroot\lib\jquery\dist\jquery.min.js
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Kanban\Index.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout_kanban.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Users\Index.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\Razor\Views\Users\EditUser.cshtml.g.cs
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Users.UserViewModel.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.ViewModels.Users.UserViewModel.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Users.Index.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Users.Index.zh-TW.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Users.EditUser.en-US.resources
+D:\PMC\2020.07 MainForm\mainform\MainForm\MainForm\obj\Debug\netcoreapp3.1\MainForm.Resources.Views.Users.EditUser.zh-TW.resources

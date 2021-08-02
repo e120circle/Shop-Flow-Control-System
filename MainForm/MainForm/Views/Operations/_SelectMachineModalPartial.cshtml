@@ -1,0 +1,85 @@
+﻿@using SQLClass.Models.OperationsResource
+@using ReflectionIT.Mvc.Paging
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@addTagHelper *, ReflectionIT.Mvc.Paging
+@model MainForm.ViewModels.Operations.OperationsViewModel
+
+@inject IViewLocalizer localizer
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+<div class="col-12" style="margin-top:5px;">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding-left:0;">
+        @await this.Component.InvokeAsync("Pager", new { pagingList = this.Model.MachineResourceInPaging })
+    </div>
+    <form method="post" id="ResourceSearchForm" class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="align-self: flex-end;text-align: right;">
+        <div class="row" style="overflow:auto;">
+            <input name="Resource_no_filter" class="form-control col-sm-12 col-md-3 col-lg-3 col-xl-3" placeholder="@localizer["search_Machine_no"]"
+                   value="@Model.MachineResourceInPaging.RouteValue["Resource_no_filter"]" style="margin-left:5px;margin-right:5px;width:100%;" />
+            <button type="submit" class="btn btn-info btn-search col-sm-12 col-md-1 col-lg-1 col-xl-1" id="SearchSubmitBtn"
+                    asp-controller="Operations" asp-action="GetAllMachine">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+        </div>
+    </form>
+</div>
+<input hidden="hidden" id="resource_sort_str" value="@Model.Resource_Sort_str" />
+<table class="responstable">
+    <thead>
+        <tr>
+            <th>
+                @if (Model.Resource_Sort_str == "-Resource_no")
+                {
+                    <a asp-action="GetAllMachine" class="sort-link" asp-route-sort="Resource_no" id="Resource_no_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ResourceVM.Resource_no">@localizer["machine_no"]</label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="GetAllMachine" class="sort-link" asp-route-sort="-Resource_no" id="Resource_no_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ResourceVM.Resource_no">@localizer["machine_no"]</label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Resource_Sort_str == "-Resource_name")
+                {
+                    <a asp-action="GetAllMachine" class="sort-link" asp-route-sort="Resource_name" id="Resource_name_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ResourceVM.Resource_name">@localizer["machine_name"]</label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="GetAllMachine" class="sort-link" asp-route-sort="-Resource_name" id="Resource_name_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ResourceVM.Resource_name">@localizer["machine_name"]</label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Resource_Sort_str == "-Resource_description")
+                {
+                    <a asp-action="GetAllMachine" class="sort-link" asp-route-sort="Resource_description" id="Resource_description_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ResourceVM.Resource_description">@localizer["machine_description"]</label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="GetAllMachine" class="sort-link" asp-route-sort="-Resource_description" id="Resource_description_sort_btn" name="SortATag">
+                        <label asp-for="@Model.ResourceVM.Resource_description">@localizer["machine_description"]</label>
+                    </a>
+                }
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var resource in @Model.MachineResourceInPaging)
+        {
+            <tr name="ResourceRow" id="@resource.Resource_no">
+                <td class="no">@resource.Resource_no</td>
+                <td class="name">@resource.Resource_name</td>
+                <td class="description">@resource.Resource_description</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,413 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+
+@model MainForm.ViewModels.Job.JobViewModel
+
+@{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+<script src="/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+<div class="modal-body">
+    <form method="post" id="EditRoutingForm">
+        <div class="card-body">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Routing_no" class="edit-label col-6 postfix"></label>
+                            <input asp-for="@Model.RoutingViewModel.Routing_no" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Routing_no" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-6" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Routing_id" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Routing_id" class="form-control col-6" style="text-align:left;" readonly="readonly" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Routing_id" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Actually_start_date" class="edit-label col-6 postfix"></label>
+                            <input type="date" asp-for="@Model.RoutingViewModel.Actually_start_date" class="form-control col-6" readonly="readonly" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Actually_start_date" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Previous_routing_id" class="edit-label col-6 postfix"></label>
+                            <select asp-for="@Model.RoutingViewModel.Previous_routing_id" asp-items="@Model.RoutingListInPrevious" class="form-control col-6 dropdown-style">
+                                <option value=""></option>
+                                <option value="0">首站</option>
+                            </select>
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Previous_routing_id" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Job_id" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Job_id" class="form-control col-6" style="text-align:left;" readonly="readonly" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Job_id" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Routing_workstation_name" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Routing_workstation_name" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Routing_workstation_name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Routing_workstation_id" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Routing_workstation_id" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Routing_workstation_id" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Routing_workstation_no" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Routing_workstation_no" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Routing_workstation_no" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-12" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Routing_workstation_description" class="edit-label"></label>
+                            <span asp-validation-for="@Model.RoutingViewModel.Routing_workstation_description" class="text-danger"></span>
+                        </div>
+                        <input asp-for="@Model.RoutingViewModel.Routing_workstation_description" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Routing_name" class="edit-label col-6 postfix"></label>
+                            <input asp-for="@Model.RoutingViewModel.Routing_name" class="form-control col-6" style="text-align:left;"/>
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Routing_name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Actually_completion_date" class="edit-label col-6 postfix"></label>
+                            <input type="date" asp-for="@Model.RoutingViewModel.Actually_completion_date" class="form-control col-6" readonly="readonly" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Actually_completion_date" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" hidden="hidden">
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Standard_setup_time" class="edit-label col-6 postfix"></label>
+                            <input asp-for="@Model.RoutingViewModel.Standard_setup_time" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Standard_setup_time" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Standard_unit_lead_time" class="edit-label col-6 postfix"></label>
+                            <input asp-for="@Model.RoutingViewModel.Standard_unit_lead_time" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Standard_unit_lead_time" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Standard_unit_setup_time" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Standard_unit_setup_time" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Standard_unit_setup_time" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Standard_unit_run_time" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Standard_unit_run_time" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Standard_unit_run_time" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Standard_unit_total_time" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Standard_unit_total_time" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Standard_unit_total_time" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" hidden="hidden">
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Actually_setup_time" class="edit-label col-6 postfix"></label>
+                            <input asp-for="@Model.RoutingViewModel.Actually_setup_time" class="form-control col-6" style="text-align:left;" readonly="readonly" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Actually_setup_time" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Actually_unit_lead_time" class="edit-label col-6 postfix"></label>
+                            <input asp-for="@Model.RoutingViewModel.Actually_unit_lead_time" class="form-control col-6" style="text-align:left;" readonly="readonly" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Actually_unit_lead_time" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Actually_unit_setup_time" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Actually_unit_setup_time" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Actually_unit_setup_time" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Actually_unit_run_time" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Actually_unit_run_time" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Actually_unit_run_time" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Actually_unit_total_time" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Actually_unit_total_time" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Actually_unit_total_time" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Scheduled_completion_quantity" class="edit-label col-6 postfix"></label>
+                            <input asp-for="@Model.RoutingViewModel.Scheduled_completion_quantity" class="form-control col-6" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Scheduled_completion_quantity" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Scheduled_completion_quantity_uom" class="edit-label col-6 postfix"></label>
+                            <input asp-for="@Model.RoutingViewModel.Scheduled_completion_quantity_uom" class="form-control col-6" readonly="readonly" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Scheduled_completion_quantity_uom" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Actually_completion_quantity" class="edit-label col-6 postfix"></label>
+                            <input asp-for="@Model.RoutingViewModel.Actually_completion_quantity" class="form-control col-6" readonly="readonly" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Actually_completion_quantity" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Actually_completion_quantity_uom" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Actually_completion_quantity_uom" class="form-control col-6" readonly="readonly" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Actually_completion_quantity_uom" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Actually_defective_quantity" class="edit-label col-6 postfix"></label>
+                            <input asp-for="@Model.RoutingViewModel.Actually_defective_quantity" class="form-control col-6" readonly="readonly" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Actually_defective_quantity" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Actually_defective_quantity_uom" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Actually_defective_quantity_uom" class="form-control col-6" readonly="readonly" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Actually_defective_quantity_uom" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Transfer_out_quantity" class="edit-label col-6 postfix"></label>
+                            <input asp-for="@Model.RoutingViewModel.Transfer_out_quantity" class="form-control col-6" readonly="readonly" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Transfer_out_quantity" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-4" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Transfer_out_quantity_uom" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Transfer_out_quantity_uom" class="form-control col-6" readonly="readonly" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Transfer_out_quantity_uom" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-6" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Scheduled_start_date" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Scheduled_start_date" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Scheduled_start_date" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-6" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Scheduled_completion_date" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Scheduled_completion_date" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Scheduled_completion_date" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Routing_description" class="edit-label postfix"></label>
+                            <textarea asp-for="@Model.RoutingViewModel.Routing_description" class="form-control" style="min-height:70px;"></textarea>
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Routing_description" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-3" hidden="hidden">
+                    <div class="form-group" style="margin:0;">
+                        <div class="row" style="align-items:center; display:flex;">
+                            <input asp-for="@Model.RoutingViewModel.Is_classification_defective_item" class="form-check-input" style="margin:1.25rem;" />
+                            <label asp-for="@Model.RoutingViewModel.Is_classification_defective_item" class="form-check-label" style="margin-left:3rem;"></label>
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Is_classification_defective_item" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-3" hidden="hidden">
+                    <div class="form-group" style="margin:0;">
+                        <div class="row" style="align-items:center; display:flex;">
+                            <input asp-for="@Model.RoutingViewModel.Is_allow_split_submit" class="form-check-input" style="margin:1.25rem;" />
+                            <label asp-for="@Model.RoutingViewModel.Is_allow_split_submit" class="form-check-label" style="margin-left:3rem;"></label>
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Is_allow_split_submit" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-3" hidden="hidden">
+                    <div class="form-group" style="margin:0;">
+                        <div class="row" style="align-items:center; display:flex;">
+                            <input asp-for="@Model.RoutingViewModel.Is_define_resource_in_opeations_submit" class="form-check-input" style="margin:1.25rem;" />
+                            <label asp-for="@Model.RoutingViewModel.Is_define_resource_in_opeations_submit" class="form-check-label" style="margin-left:3rem;"></label>
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Is_define_resource_in_opeations_submit" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-3" hidden="hidden">
+                    <div class="form-group" style="margin:0;">
+                        <div class="row" style="align-items:center; display:flex;">
+                            <input asp-for="@Model.RoutingViewModel.Is_enable" class="form-check-input" style="margin:1.25rem;" />
+                            <label asp-for="@Model.RoutingViewModel.Is_enable" class="form-check-label" style="margin-left:3rem;"></label>
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Is_enable" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Create_by" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Create_by" class="form-control col-6" readonly="readonly" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Create_by" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-6" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Create_date" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Create_date" class="form-control col-6" readonly="readonly" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Create_date" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Last_update_by" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Last_update_by" class="form-control col-6" style="text-align:left;"/>
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Last_update_by" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-6" hidden="hidden">
+                    <div class="form-group">
+                        <div class="row">
+                            <label asp-for="@Model.RoutingViewModel.Last_update_date" class="edit-label col-6"></label>
+                            <input asp-for="@Model.RoutingViewModel.Last_update_date" class="form-control col-6" style="text-align:left;" />
+                        </div>
+                        <span asp-validation-for="@Model.RoutingViewModel.Last_update_date" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card-footer text-right">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">@sharedLocalizer["cancel"]</button>
+                <button type="button" class="btn btn-danger" name="DeleteRouting"
+                        asp-controller="Job" asp-action="DeleteRouting" asp-route-job_no="@Model.WorkViewModel.Job_no" asp-route-routing_no="@Model.RoutingViewModel.Routing_no">
+                    @sharedLocalizer["delete"]
+                </button>
+                <button type="button" class="btn btn-primary" data-save="modal" name="SaveEditRouting"
+                        asp-controller="Job" asp-action="EditRouting" asp-route-no="@Model.RoutingViewModel.Routing_no">
+                    @sharedLocalizer["save"]
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

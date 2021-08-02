@@ -1,0 +1,154 @@
+﻿@using ReflectionIT.Mvc.Paging
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+@model MainForm.ViewModels.Organize.OrganizeViewModel
+
+@section AddToHead{
+    <link href="~/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/SettingMaterial.css" rel="stylesheet" />
+}
+
+@{ ViewBag.Title = @sharedLocalizer["Create_Factory_information"]; }
+
+<div class="modal-content" style="padding-top:90px;">
+    <form method="post" id="CreateFactoryForm">
+        <div class="card-header">
+            <h4 class="card-title">@sharedLocalizer["Create_Factory_information"]</h4>
+        </div>
+        <div class="card-body">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Factory_name" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Factory_name" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Factory_name" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Factory_id" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Factory_id" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Factory_id" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Factory_no" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Factory_no" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Factory_no" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Business_unit_id" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Business_unit_id" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Business_unit_id" class="form-control" readonly="readonly" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Factory_description" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Factory_description" class="text-danger"></span>
+                            </div>
+                            <textarea asp-for="@Model.FactoryViewModel.Factory_description" class="form-control" style="resize:none; min-height:70px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row" hidden="hidden">
+                    <div class="col">
+                        <div class="form-group" style="margin:0;">
+                            <div class="row" style="align-items:center; display:flex;">
+                                <input asp-for="@Model.FactoryViewModel.Is_enable" class="form-check-input" style="margin:1.25rem;" />
+                                <label asp-for="@Model.FactoryViewModel.Is_enable" class="form-check-label" style="margin-left:3rem;"></label>
+                            </div>
+                            <span asp-validation-for="@Model.FactoryViewModel.Is_enable" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Create_by" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Create_by" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Create_by" class="form-control" readonly="readonly" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Create_date" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Create_date" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Create_date" class="form-control" readonly="readonly" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Last_update_by" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Last_update_by" class="text-danger"></span>
+                            </div>
+                            <select asp-for="@Model.FactoryViewModel.Last_update_by" asp-items="@Model.LastUpdateUserList" class="form-control"></select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="@Model.FactoryViewModel.Last_update_date" class="edit-label"></label>
+                                <span asp-validation-for="@Model.FactoryViewModel.Last_update_date" class="text-danger"></span>
+                            </div>
+                            <input asp-for="@Model.FactoryViewModel.Last_update_date" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-right">
+            <a type="button" class="btn btn-secondary" asp-controller="Organize" asp-action="Index">@sharedLocalizer["cancel"]</a>
+            <button type="button" class="btn btn-primary" name="SaveCreateFactory"
+                    asp-controller="Organize" asp-action="SaveCreateFactory">
+                @sharedLocalizer["save"]
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+    <script>//save create factory
+        $(document).on("click", 'button[name="SaveCreateFactory"]', function () {
+            var url = $(this).attr('formaction');
+            $.ajax({
+                type: "post",
+                url: decodeURIComponent(url),
+                dataType: "html",
+                data: $("#CreateFactoryForm").serialize(),
+                success: function (result) {
+                    if (result) {
+                        $('body').html(result);
+                    }
+                },
+                error: function () { alert('Error occurred in save create factory.'); }
+            });
+        });
+            //save create factory</script>
+}

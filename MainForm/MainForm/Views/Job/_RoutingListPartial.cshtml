@@ -1,0 +1,151 @@
+﻿@using SQLClass.Models.Routing
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@model MainForm.ViewModels.Job.JobViewModel
+
+@inject IViewLocalizer localizer
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+<input hidden="hidden" id="routing_sort_str" value="@Model.Routing_Sort_str" />
+<table class="responstable">
+    <thead>
+        <tr>
+            <th>
+                @if (Model.Routing_Sort_str == "-Routing_no")
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="Routing_no" id="Routing_no_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Routing_no"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="-Routing_no" id="Routing_no_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Routing_no"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Routing_Sort_str == "-Routing_name")
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="Routing_name" id="Routing_name_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Routing_name"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="-Routing_name" id="Routing_name_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Routing_name"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Routing_Sort_str == "-Actually_start_date")
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="Actually_start_date" id="Actually_start_date_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Actually_start_date"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="-Actually_start_date" id="Actually_start_date_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Actually_start_date"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Routing_Sort_str == "-Actually_completion_date")
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="Actually_completion_date" id="Actually_completion_date_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Actually_completion_date"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="-Actually_completion_date" id="Actually_completion_date_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Actually_completion_date"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Routing_Sort_str == "-Scheduled_completion_quantity")
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="Job_scheduled_completion_quantity" id="Scheduled_completion_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Scheduled_completion_quantity"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="-Scheduled_completion_quantity" id="Scheduled_completion_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Scheduled_completion_quantity"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Routing_Sort_str == "-Actually_completion_quantity")
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="Actually_completion_quantity" id="Actually_completion_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Actually_completion_quantity"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="-Actually_completion_quantity" id="Actually_completion_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Actually_completion_quantity"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Routing_Sort_str == "-Actually_defective_quantity")
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="Actually_defective_quantity" id="Actually_defective_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Actually_defective_quantity"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="-Actually_defective_quantity" id="Actually_defective_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Actually_defective_quantity"></label>
+                    </a>
+                }
+            </th>
+            <th>
+                @if (Model.Routing_Sort_str == "-Transfer_out_quantity")
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="Transfer_out_quantity" id="Transfer_out_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Transfer_out_quantity"></label>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="RouteSort" class="sort-link" asp-route-job_id="@Model.WorkViewModel.Job_id" asp-route-sort="-Transfer_out_quantity" id="Transfer_out_quantity_sort_btn" name="SortATag">
+                        <label asp-for="@Model.RoutingViewModel.Transfer_out_quantity"></label>
+                    </a>
+                }
+            </th>
+            <th style="padding-left:0.5rem; padding-right:0.5rem; color:white;">@sharedLocalizer["function"]</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Routing routing in @Model.RoutingListInPaging)
+        {
+            <tr>
+                <td>@routing.Routing_no</td>
+                <td>@routing.Routing_name</td>
+                <td>@((routing.Actually_start_date.HasValue) ? routing.Actually_start_date.Value.ToString("d") : "--")</td>
+                <td>@((routing.Actually_completion_date.HasValue) ? routing.Actually_completion_date.Value.ToString("d") : "--")</td>
+                <td>@routing.Scheduled_completion_quantity</td>
+                <td>@routing.Actually_completion_quantity</td>
+                <td>@routing.Actually_defective_quantity</td>
+                <td>@routing.Transfer_out_quantity</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-rounded waves-effect" name="ShowEditRouting"
+                            style="float:right; padding-left:0.5rem; padding-right:0.5rem;"
+                            asp-controller="Job" asp-action="EditRouting" asp-route-no="@routing.Routing_no">
+                        <i class="fas fa-edit"></i>
+                        @sharedLocalizer["edit"]
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

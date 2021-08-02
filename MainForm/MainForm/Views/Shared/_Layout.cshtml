@@ -1,0 +1,495 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+@inject UserManager<MainFormUsers> UserManager
+@{
+    var user = await UserManager.GetUserAsync(User);
+}
+
+@{ 
+    string controller = string.Empty;
+    string action = string.Empty;
+} 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" , shrink-to-fit=no />
+    <title>@sharedLocalizer["web_title"] - @ViewBag.Title</title>
+
+    <link href="~/vendor/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/font-face.css" rel="stylesheet" media="all">
+    <link href="~/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="~/vendor/font-awesome-5/css/all.min.css" rel="stylesheet" media="all">
+    <link href="~/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="~/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="~/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" />
+    <link href="~/vendor/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/css/custom.min.css" rel="stylesheet" />
+    <link href="~/css/_Layout.css" rel="stylesheet" />
+    <link href="~/css/SettingMaterial.css" rel="stylesheet" />
+
+    <STYLE TYPE="text/css" media="screen,print">
+        @@font-face {
+            font-family: 'Code128';
+            src: url('/vendor/ConnectCode128_S3_Trial.otf') format("opentype");
+        }
+
+        #barcode {
+            font-weight: normal;
+            font-style: normal;
+            line-height: normal;
+            font-family: 'Code128', 'sans-serif';
+            font-size: 32px
+        }
+
+        @@media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                font-size: 25px;
+                font-weight: normal;
+            }
+
+            body, page[size="A4"] {
+                margin: 0px;
+                box-shadow: 0;
+            }
+
+            .ScreenOnly {
+                display: none
+            }
+
+            .ScreenOnlyLabel {
+                border: 1px solid #000;
+                color: #6E6E6E;
+            }
+        }
+
+        @@media screen {
+            .PrintOnly {
+                display: none
+            }
+        }
+    </STYLE>
+
+    @if (IsSectionDefined("AddToHead"))
+    {
+    @RenderSection("AddToHead", required: false)
+    }
+</head>
+<body>
+    <div>
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar ScreenOnly">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner" style="align-items:center;">
+                        <a class="logo" asp-action="index" asp-controller="home">
+                            <img src="~/images/MaxLogo.png" alt="MAX PRECISE" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        @*判斷是否登入（Controller and Action 為null）*@
+                        @if (ViewContext.RouteData.Values["Controller"] != null)
+                        {
+                            controller = ViewContext.RouteData.Values["Controller"].ToString();
+                        }
+
+                        @if (ViewContext.RouteData.Values["Action"] != null)
+                        {
+                            action = ViewContext.RouteData.Values["Action"].ToString();
+                        }
+                        <li @if (controller == "Home" && action == "Index") { <text> class="active" </text>   }>
+                            <a asp-action="Index" asp-controller="Home">
+                                <i class="fa fa-home"></i>@sharedLocalizer["Home"]
+                            </a>
+                        </li>
+                        <li @if (controller == "Job" && action == "Index") { <text> class="active" </text>   }>
+                            <a asp-action="Index" asp-controller="Job">
+                                <i class="fas fa-book"></i>@sharedLocalizer["Job"]
+                            </a>
+                        </li>
+                        <li @if (controller == "Operations" && action == "Start") { <text> class="active" </text>   }>
+                            <a asp-action="Start" asp-controller="Operations">
+                                <i class="fas fa-gavel"></i>@sharedLocalizer["Operations_Start"]
+                            </a>
+                        </li>
+                        <li @if (controller == "Operations" && action == "Finish") { <text> class="active" </text>   }>
+                            <a asp-action="Finish" asp-controller="Operations">
+                                <i class="fas fa-flag-checkered"></i>@sharedLocalizer["Operations_Finish"]
+                            </a>
+                        </li>
+                        <li @if (controller == "Report" && action == "Index") { <text> class="active" </text>   }>
+                            <a asp-action="Index" asp-controller="Report">
+                                <i class="fa fa-file-text"></i>@sharedLocalizer["Report"]
+
+                            </a>
+                        </li>
+                        <li @if (controller == "Users" && action == "Index") { <text> class="active" </text>   }>
+                            <a asp-action="Index" asp-controller="Users">
+                                <i class="fas fa-user-cog"></i>@sharedLocalizer["RolesAdmin"]
+                            </a>
+                        </li>
+                        <!--<li class="has-sub">
+                        <a class="js-arrow" href="#">
+                            <i class="fas fa-cogs"></i>sharedLocalizer["Setting"]
+                        </a>
+                        <ul class="list-unstyled navbar__sub-list js-sub-list">-->
+                        @*<li @if (controller == "Organize" && action == "Index") { <text> class="active" </text> }>
+                                <a asp-action="Index" asp-controller="Organize">
+                                    <i class="fas fa-user-cog"></i>@sharedLocalizer["Organize"]
+                                </a>
+                            </li>*@
+                        <!--<li if (controller == "Users" && action == "Index") { <text> class="active" </text> }>
+                            <a asp-action="Index" asp-controller="Users">
+                                <i class="fas fa-user-cog"></i>sharedLocalizer["RolesAdmin"]
+                            </a>
+                        </li>-->
+                        @*<li @if (controller == "RolesAdmin" && action == "Index") { <text> class="active" </text> }>
+                                <a asp-area="" asp-controller="RolesAdmin" asp-action="Index">
+                                    <i class="fas fa-tools"></i>@sharedLocalizer["ToolManage"]
+                                </a>
+                            </li>*@
+                        <!--</ul>
+                        </li>-->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="menu-sidebar d-none d-lg-block" style="background-color:#F2EEE5; z-index:9">
+            <div class="logo" style="background-color: #F2EEE5; align-items:center; border:0px;">
+                <a asp-action="index" asp-controller="home">
+                    <img src="~/images/MaxLogo.png" alt="MAX PRECISE"><br>
+                    <div class="container" style="display:flex;">
+                        <b style="color:#6E6E6E;margin:0 auto;">麥斯精密工業股份有限公司</b>
+                    </div>
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li @if (controller == "Home" && action == "Index") { <text> class="active" </text>    }>
+                            <a asp-action="Index" asp-controller="Home">
+                                <i class="fa fa-home"></i>@sharedLocalizer["Home"]
+                            </a>
+                        </li>
+                        <li @if (controller == "Job" && action == "Index") { <text> class="active" </text>    }>
+                            <a asp-action="Index" asp-controller="Job">
+                                <i class="fas fa-book"></i>@sharedLocalizer["Job"]
+                            </a>
+                        </li>
+                        <li @if (controller == "Operations" && action == "Start") { <text> class="active" </text>    }>
+                            <a asp-action="Start" asp-controller="Operations">
+                                <i class="fas fa-gavel"></i>@sharedLocalizer["Operations_Start"]
+                            </a>
+                        </li>
+                        <li @if (controller == "Operations" && action == "Finish") { <text> class="active" </text>    }>
+                            <a asp-action="Finish" asp-controller="Operations">
+                                <i class="fas fa-flag-checkered"></i>@sharedLocalizer["Operations_Finish"]
+                            </a>
+                        </li>
+                        <li @if (controller == "Report" && action == "Index") { <text> class="active" </text>    }>
+                            <a asp-action="Index" asp-controller="Report">
+                                <i class="fa fa-file-text"></i>@sharedLocalizer["Report"]
+                            </a>
+                        </li>
+                        <li @if (controller == "Users" && action == "Index") { <text> class="active" </text>    }>
+                            <a asp-action="Index" asp-controller="Users">
+                                <i class="fas fa-user-cog"></i>@sharedLocalizer["RolesAdmin"]
+                            </a>
+                        </li>
+                        <!--<li class="has-sub">
+                        <a class="js-arrow" href="#">
+                            <i class="fas fa-cogs"></i>sharedLocalizer["Setting"]
+                        </a>
+                        <ul class="list-unstyled navbar__sub-list js-sub-list">-->
+                        @*<li @if (controller == "Organize" && action == "Index") { <text> class="active" </text> }>
+                                <a asp-action="Index" asp-controller="Organize">
+                                    <i class="fas fa-user-cog"></i>@sharedLocalizer["Organize"]
+                                </a>
+                            </li>*@
+
+                        @*<li @if (controller == "RolesAdmin" && action == "Index") { <text> class="active" </text> }>
+                                <a asp-area="" asp-controller="RolesAdmin" asp-action="Index">
+                                    <i class="fas fa-tools"></i>@sharedLocalizer["ToolManage"]
+                                </a>
+                            </li>*@
+                        <!--</ul>
+                        </li>-->
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="page-container">
+            <header class="header-desktop ScreenOnly">
+                <div class="section__content">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <div class="header-button" style="margin-left:auto; margin-right:0;">
+                                <!--<div class="noti-wrap">
+                                    <div class="noti__item js-item-menu">
+                                        <i class="zmdi zmdi-comment-more"></i>
+                                        <span class="quantity">1</span>
+                                        <div class="mess-dropdown js-dropdown">
+                                            <div class="mess__title">
+                                                <p>You have 2 news message</p>
+                                            </div>
+                                            <div class="mess__item">
+                                                <div class="image img-cir img-40">
+                                                    <img src="images/icon/avatar-06.jpg" alt="Michelle Moreno" />
+                                                </div>
+                                                <div class="content">
+                                                    <h6>Michelle Moreno</h6>
+                                                    <p>Have sent a photo</p>
+                                                    <span class="time">3 min ago</span>
+                                                </div>
+                                            </div>
+                                            <div class="mess__item">
+                                                <div class="image img-cir img-40">
+                                                    <img src="images/icon/avatar-04.jpg" alt="Diane Myers" />
+                                                </div>
+                                                <div class="content">
+                                                    <h6>Diane Myers</h6>
+                                                    <p>You are now connected on message</p>
+                                                    <span class="time">Yesterday</span>
+                                                </div>
+                                            </div>
+                                            <div class="mess__footer">
+                                                <a href="#">View all messages</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="noti__item js-item-menu">
+                                        <i class="zmdi zmdi-email"></i>
+                                        <span class="quantity">1</span>
+                                        <div class="email-dropdown js-dropdown">
+                                            <div class="email__title">
+                                                <p>You have 3 New Emails</p>
+                                            </div>
+                                            <div class="email__item">
+                                                <div class="image img-cir img-40">
+                                                    <img src="images/icon/avatar-06.jpg" alt="Cynthia Harvey" />
+                                                </div>
+                                                <div class="content">
+                                                    <p>Meeting about new dashboard...</p>
+                                                    <span>Cynthia Harvey, 3 min ago</span>
+                                                </div>
+                                            </div>
+                                            <div class="email__item">
+                                                <div class="image img-cir img-40">-->
+                                @*<img src="images/icon/avatar-05.jpg" alt="Cynthia Harvey" />*@
+                                <!--</div>
+                                    <div class="content">
+                                        <p>Meeting about new dashboard...</p>
+                                        <span>Cynthia Harvey, Yesterday</span>
+                                    </div>
+                                </div>
+                                <div class="email__item">
+                                    <div class="image img-cir img-40">-->
+                                @*<img src="images/icon/avatar-04.jpg" alt="Cynthia Harvey" />*@
+                                <!--</div>
+                                                <div class="content">
+                                                    <p>Meeting about new dashboard...</p>
+                                                    <span>Cynthia Harvey, April 12,,2018</span>
+                                                </div>
+                                            </div>
+                                            <div class="email__footer">
+                                                <a href="#">See all emails</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="noti__item js-item-menu">
+                                        <i class="zmdi zmdi-notifications"></i>
+                                        <span class="quantity">3</span>
+                                        <div class="notifi-dropdown js-dropdown">
+                                            <div class="notifi__title">
+                                                <p>You have 3 Notifications</p>
+                                            </div>
+                                            <div class="notifi__item">
+                                                <div class="bg-c1 img-cir img-40">
+                                                    <i class="zmdi zmdi-email-open"></i>
+                                                </div>
+                                                <div class="content">
+                                                    <p>You got a email notification</p>
+                                                    <span class="date">April 12, 2018 06:50</span>
+                                                </div>
+                                            </div>
+                                            <div class="notifi__item">
+                                                <div class="bg-c2 img-cir img-40">
+                                                    <i class="zmdi zmdi-account-box"></i>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Your account has been blocked</p>
+                                                    <span class="date">April 12, 2018 06:50</span>
+                                                </div>
+                                            </div>
+                                            <div class="notifi__item">
+                                                <div class="bg-c3 img-cir img-40">
+                                                    <i class="zmdi zmdi-file-text"></i>
+                                                </div>
+                                                <div class="content">
+                                                    <p>You got a new file</p>
+                                                    <span class="date">April 12, 2018 06:50</span>
+                                                </div>
+                                            </div>
+                                            <div class="notifi__footer">
+                                                <a href="#">All notifications</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+                                <nav class="navbar navbar-expand-lg navbar-toggleable-sm">
+                                    <div class="container">
+                                        <partial name="_LoginPartial.cshtml" />
+                                    </div>
+                                </nav>
+                                @*<vc:culture-picker />*@
+                                <div class="nav-item">
+                                    @await Html.PartialAsync("_CulturePartial")
+                                </div>
+                                @*<div class="account-wrap">
+                                        <div class="account-item clearfix js-item-menu">
+                                            <div class="image">
+                                                <img src="images/icon/avatar-01.jpg" alt="john doe" />
+                                            </div>
+                                            <div class="content">
+                                                <a class="js-acc-btn" href="#">john doe</a>
+                                            </div>
+                                            <div class="account-dropdown js-dropdown">
+                                                <div class="info clearfix">
+                                                    <div class="image">
+                                                        <a href="#">
+                                                            <img src="images/icon/avatar-01.jpg" alt="john doe" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="content">
+                                                        <h5 class="name">
+                                                            <a href="#">john doe</a>
+                                                        </h5>
+                                                        <span class="email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fd97929593999298bd98859c908d9198d39e9290">[email&#160;protected]</a></span>
+                                                    </div>
+                                                </div>
+                                                <div class="account-dropdown__body">
+                                                    <div class="account-dropdown__item">
+                                                        <a href="#">
+                                                            <i class="zmdi zmdi-account"></i>account
+                                                        </a>
+                                                    </div>
+                                                    <div class="account-dropdown__item">
+                                                        <a href="#">
+                                                            <i class="zmdi zmdi-settings"></i>setting
+                                                        </a>
+                                                    </div>
+                                                    <div class="account-dropdown__item">
+                                                        <a href="#">
+                                                            <i class="zmdi zmdi-money-box"></i>billing
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="account-dropdown__footer">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-power"></i>logout
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            @*<div class="spinner">
+                    <div class="center-div">
+                        <div class="inner-div">
+                            <img src="~/images/preloader.gif" />
+                        </div>
+                    </div>
+                </div>*@
+            @*<div class="main-content">*@
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+
+        @*<footer class="border-top footer text-muted">
+            <div class="container">
+            &copy; 2020 - MainForm - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+            </footer>*@
+    </div>
+
+    @*<environment include="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js" type="81c2b42073273d4ead0bd96b-text/javascript"></script>
+        </environment>*@
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js" type="81c2b42073273d4ead0bd96b-text/javascript"></script>
+    <!--<environment exclude="Development">
+        <script-->
+    @*src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"*@
+    <!--src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery"
+            crossorigin="anonymous"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+    </script>
+    <script-->
+    @*src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"*@
+    <!--src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>-->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/vendor/bootstrap/popper.min.js" type="81c2b42073273d4ead0bd96b-text/javascript"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+    @*<script src="~/vendor/bootstrap/bootstrap.min.js" type="81c2b42073273d4ead0bd96b-text/javascript"></script>*@
+    <script src="~/vendor/animsition/animsition.min.js" type="81c2b42073273d4ead0bd96b-text/javascript"></script>
+    <script src="~/js/main.js" type="81c2b42073273d4ead0bd96b-text/javascript"></script>
+    @*<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="81c2b42073273d4ead0bd96b-|49" defer=""></script>*@
+    <script src="~/js/rocket-loader.min.js" data-cf-settings="81c2b42073273d4ead0bd96b-|49" defer=""></script>
+    @*<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>*@
+    <script src="~/js/jquery-2.2.0.min.js"></script>
+    <script src="~/vendor/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    @*<script src="~/js/canvasjs.min.js"></script>*@
+    <script src="~/js/loader.js"></script>
+    @*<script>
+            $(window).on('load', function () {
+                $('.spinner').css('display', 'none');
+            });
+        </script>
+        <script>
+            $(document).ajaxSend(function (event, xhr, options) {
+                $('.spinner').css('display', 'block');
+            }).ajaxComplete(function (event, xhr, options) {
+                $('.spinner').css('display', 'none');
+            }).ajaxError(function (event, jqxhr, settings, exception) {
+                $('.spinner').css('display', 'none');
+            });
+        </script>*@
+
+    <script>
+        //delete routing
+        $(document).on("change", 'select[name="culture"]', function () {
+            //this.parentElement.parentElement.submit();
+        });
+                                                    //delete routing
+    </script>
+
+    @RenderSection("Scripts", false)
+</body>
+</html>

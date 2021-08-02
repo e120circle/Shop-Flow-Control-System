@@ -1,0 +1,333 @@
+﻿@using SQLClass.Models.Job
+@using SQLClass.Models.OperationsSubmit
+@using ReflectionIT.Mvc.Paging
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@addTagHelper *, ReflectionIT.Mvc.Paging
+@inject IViewLocalizer localizer
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+@model MainForm.ViewModels.Home.HomeViewModel
+
+@section AddToHead{
+    @*<link href="~/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/SettingMaterial.css" rel="stylesheet" />*@
+}
+
+@{ ViewBag.Title = "生產進度看板"; }
+
+<div style="margin-top:90px;">
+    <div class="row" style="margin-right:10px; margin-left:10px">
+        <h3 style="margin:auto">生產進度看板</h3>
+    </div>
+    <div class="mt-3" style="padding:0px">
+        <div class="col-lg-12" style="overflow-x:auto;">
+            <input id="sort_str" value="@Model.Sort_str" />
+            <table class="responstable">
+                <thead>
+                    <tr>
+                        <th>
+                            @if (Model.Sort_str == "-Job_no")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Job_no" id="Job_no_sort_btn">
+                                    <label>@localizer["Job_no"]</label>
+                                </a> }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Job_no" id="Job_no_sort_btn">
+                                    <label>@localizer["Job_no"]</label>
+                                </a>}
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Item_name")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Item_name" id="Item_name_sort_btn">
+                                    <label>@localizer["Item_name"]</label>
+
+                                </a> }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Item_name" id="Item_name_sort_btn">
+                                    <label>@localizer["Item_name"]</label>
+                                </a>}
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Item_no")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Item_no" id="Item_no_sort_btn">
+                                    <label>@localizer["Item_no"]</label>
+
+                                </a> }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Item_no" id="Item_no_sort_btn">
+                                    <label>@localizer["Item_no"]</label>
+                                </a>}
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Scheduled_completion_quantity")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Scheduled_completion_quantity" id="Scheduled_completion_quantity_sort_btn">
+                                    <label>@localizer["Scheduled_completion_quantity"]</label>
+                                </a> }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Scheduled_completion_quantity" id="Scheduled_completion_quantity_sort_btn">
+                                    <label>@localizer["Scheduled_completion_quantity"]</label>
+                                </a>}
+                        </th>
+                        <th>
+                            @if (Model.Sort_str == "-Item_description")
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="Item_description" id="Item_description_sort_btn">
+
+                                    <label>@localizer["Item_description"]</label>
+
+                                </a> }
+                            else
+                            {
+                                <a asp-page="/Index" class="sort-link" asp-route-sort="-Item_description" id="Item_description_sort_btn">
+                                    <label>@localizer["Item_description"]</label>
+                                </a>}
+                        </th>
+                        <th>途程1</th>
+                        <th>途程2</th>
+                        <th>途程3</th>
+                        <th>途程4</th>
+                        <th>途程5</th>
+                        <th>途程6</th>
+                        <th>途程7</th>
+                        <th>途程8</th>
+                        <th>途程9</th>
+                        <th>途程10</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < @Model.JobListInPaging.Count(); i++)
+                    {
+                    <tr id="collapsBtn" name="@Model.JobListInPaging[i].Job_no">
+                        <td>@Model.JobListInPaging[i].Job_no</td>
+                        <td>@Model.JobListInPaging[i].Item_name</td>
+                        <td>@Model.JobListInPaging[i].Item_no</td>
+                        <td>@Model.JobListInPaging[i].Scheduled_completion_quantity</td>
+                        <td>@((Model.JobListInPaging[i].Scheduled_completion_date.HasValue) ? Model.JobListInPaging[i].Scheduled_completion_date.Value.ToString("d") : "--")</td>
+
+                        @for (int j = 0; j < 10; j++)
+                        {
+                            if (j < @Model.RoutingsList[i].Count())
+                            {
+                                var quan = 0;
+                                foreach (OperationsSubmit a in Model.SubmitList.Where(x => x.Operations_submit_no.Contains(Model.RoutingsList[i][j].Routing_no)).ToList())
+                                {
+                                    quan += a.Actually_completion_quantity;
+                                }
+
+                                if (Model.SubmitList.Where(x => x.Operations_submit_no.Contains(Model.RoutingsList[i][j].Routing_no)).ToList().Count > 0)
+                                {
+                                    @if (Model.SubmitList.Where(x => x.Operations_submit_no.Contains(Model.RoutingsList[i][j].Routing_no)).ToList().Last().Actually_completion_date.ToString() == "")
+                                    {
+                                        <td style="background-color: #00F500;">
+                                            <div>@Model.RoutingsList[i][j].Routing_name</div>
+                                            <div>@quan</div>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            <div>@Model.RoutingsList[i][j].Routing_name</div>
+                                            <div>@quan</div>
+                                        </td>
+                                    }
+                                }
+                                else
+                                {
+                                    <td>
+                                        <div>@Model.RoutingsList[i][j].Routing_name</div>
+                                        <div>@quan</div>
+                                    </td>
+                                }
+                            }
+                            else
+                            {
+                                <td />
+                            }
+                        }
+                    </tr>
+                        <tr>
+                            <td colspan="15">
+                                <div id="@Model.JobListInPaging[i].Job_no" class="collapse-div">
+                                    @*<div id="piechart_3d" style="width: 220px; height: 200px;"></div>
+                                        <div id="chart_div"></div>*@
+                                    <table class="responstable" id="myTable" style="background-color: transparent;">
+                                        <thead>
+                                            <tr>
+                                                <th style="background-color:#FFFFFF; border-radius:0px; border: 1px solid #D9E4E6;">
+                                                    <label>@localizer["Routing_name"]</label>
+                                                </th>
+                                                <th style="background-color:#FFFFFF; border-radius:0px; border: 1px solid #D9E4E6;">
+                                                    <label>@localizer["Actually_start_date"]</label>
+                                                </th>
+                                                <th style="background-color:#FFFFFF; border-radius:0px; border: 1px solid #D9E4E6;">
+                                                    <label>@localizer["Actually_completion_date"]</label>
+                                                </th>
+                                                <th style="background-color:#FFFFFF; border-radius:0px; border: 1px solid #D9E4E6;">
+                                                    <label>@localizer["Actually_completion_quantity"]</label>
+                                                </th>
+                                                <th style="background-color:#FFFFFF; border-radius:0px; border: 1px solid #D9E4E6;">
+                                                    <label>@localizer["Actually_defective_quantity"]</label>
+                                                </th>
+                                                <th style="background-color:#FFFFFF; border-radius:0px; border: 1px solid #D9E4E6;">
+                                                    <label>@localizer["Transfer_out_quantity"]</label>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="responstable-tbody">
+                                            @for (int y = 0; y < @Model.RoutingsList[i].Count(); y++)
+                                            {
+                                                <tr class='child' style='background-color:snow;'>
+                                                    <td>@Model.RoutingsList[i][y].Routing_name</td>
+                                                    <td>@Model.RoutingsList[i][y].Actually_start_date</td>
+                                                    <td>@Model.RoutingsList[i][y].Actually_completion_date</td>
+                                                    <td>@Model.RoutingsList[i][y].Actually_completion_quantity</td>
+                                                    <td>@Model.RoutingsList[i][y].Actually_defective_quantity</td>
+                                                    <td>@Model.RoutingsList[i][y].Transfer_out_quantity</td>
+                                                </tr>
+}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+}
+                </tbody>
+            </table>
+            <div style="text-align:center;">
+                <nav aria-label="Suppliers navigation example">
+                    <vc:pager paging-list="@Model.JobListInPaging" />
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+    function myrefresh() {
+            window.location.reload();//重新刷新頁面
+        }
+        setTimeout('myrefresh()', 1800000); //每分鐘刷新一次單位msec
+
+        $(document).on("click", 'tr[id="collapsBtn"]', function (e) {
+            e.preventDefault(); //停止事件的默認動作，觸發的事件中加入event.preventDefault()，就不會在執行他默認的動作，也就是不會再執行「連結到某個網址」這個動作
+            var idd = $(this).attr('name');
+            var testElement = document.getElementById(idd);
+
+            if (testElement.classList.contains('collapse-div')) {
+                testElement.classList.remove('collapse-div')
+                testElement.classList.add('extend-div')
+            } else {
+                testElement.classList.remove('extend-div')
+                testElement.classList.add('collapse-div')
+            }
+        });</script>
+    <script>
+    $(document).ready(function () {
+            var tt = document.getElementById("sort_str").value;
+
+            $('a').removeClass("fas");
+            $('a').removeClass("fa-sort-asc");
+            $('a').removeClass("fa-sort-desc");
+
+            if (tt == "Job_no") {//sort job_no
+                document.getElementById("Job_no_sort_btn").classList.add("fas");
+                document.getElementById("Job_no_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Item_name") {//sort Item_name
+                document.getElementById("Item_name_sort_btn").classList.add("fas");
+                document.getElementById("Item_name_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Item_no") {//sort Item_no
+                document.getElementById("Item_no_sort_btn").classList.add("fas");
+                document.getElementById("Item_no_sort_btn").classList.add("fa-sort-asc");
+            }
+            else if (tt == "-Scheduled_completion_quantity") {//sort Scheduled_completion_quantity
+                document.getElementById("Scheduled_completion_quantity_sort_btn").classList.add("fas");
+                document.getElementById("Scheduled_completion_quantity_sort_btn").classList.add("fa-sort-desc");
+            }
+            else if (tt == "Item_description") {//sort Item_description
+                document.getElementById("Item_description_sort_btn").classList.add("fas");
+                document.getElementById("Item_description_sort_btn").classList.add("fa-sort-asc");
+            }
+
+        });</script>
+    <!--<script>
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                    ['Type', 'Data'],
+                Html.Raw($"['{"預計完成：" + Model.RoutingsList[2][3].Scheduled_completion_quantity}', {Model.RoutingsList[2][3].Scheduled_completion_quantity}],")
+                Html.Raw($"['{"實際完成：" + Model.RoutingsList[2][3].Actually_completion_quantity}', {Model.RoutingsList[2][3].Actually_completion_quantity}]")
+
+                ]);
+            var options = {
+                title: 'Html.Raw(Model.RoutingsList[2][3].Routing_name)',
+                titleTextStyle: {
+                    fontSize: 14
+                }, titlePosition: 'center',
+                is3D: true,
+                width: 220,
+                height: 200,
+                backgroundColor: '#C3E2DD',
+                legend: { position: 'left', alignment: 'top', textStyle: { color: 'black', fontSize: 14, bold: true } },
+                chartArea: { left: 0, top: 20, width: "95%", height: "100%" },
+                pieSliceText: 'none',
+                colors: ['#E9E9E9', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6']
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                chart.draw(data, options);
+                };
+    </script>
+    <script>
+    google.charts.load('current', { packages: ['corechart', 'bar'] });
+    google.charts.setOnLoadCallback(drawBasic);
+
+    function drawBasic() {
+
+        var data = google.visualization.arrayToDataTable([
+                    ['Route', 'Route1', 'Route2'],
+                Html.Raw($"['{"預計完成：" + Model.RoutingsList[2][3].Scheduled_completion_quantity}', {Model.RoutingsList[2][3].Scheduled_completion_quantity}],")
+                Html.Raw($"['{"實際完成：" + Model.RoutingsList[2][3].Actually_completion_quantity}', {Model.RoutingsList[2][3].Actually_completion_quantity}]")
+
+                ]);
+
+        <!--var data = google.visualization.arrayToDataTable([
+        ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
+         'Western', 'Literature', { role: 'annotation' } ],
+        ['2010', 10, 24, 20, 32, 18, 5, '']
+      ]);
+
+        var options = {
+            title: 'Population of Largest U.S. Cities',
+            chartArea: { width: '90%' },
+            width: 600,
+            height: 600,
+            hAxis: {
+                title: 'Total Population',
+                minValue: 0
+            },
+            vAxis: {
+                title: 'City'
+            }, isStacked: true
+            //chartArea: { left: 0, top: 20, width: "95%", height: "100%" },
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+    }
+    </script>-->
+}

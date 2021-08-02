@@ -1,0 +1,243 @@
+﻿@using SQLClass.Models.Job
+@using SQLClass.Models.OperationsSubmit
+@using ReflectionIT.Mvc.Paging
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@addTagHelper *, ReflectionIT.Mvc.Paging
+@inject IViewLocalizer localizer
+@inject IHtmlLocalizer<MainForm.SharedResource> sharedLocalizer
+
+@model MainForm.ViewModels.Home.HomeViewModel
+
+@section AddToHead{
+    <link rel="stylesheet" href="~/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/css/adminlte.min.css">
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout_kanban.cshtml";
+}
+
+
+@{ ViewBag.Title = "生產進度看板"; }
+
+<!-- Navbar -->
+<nav class=" navbar navbar-expand navbar-dark navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <img src="~/images/MaxLogo_white.png" />
+        </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <div class="weather">
+            <div class="weatherNow"></div>
+            <div class="weatherWeek"></div>
+        </div>
+        <font color="white">
+            <h1>
+                <script language="javascript">
+    var Today = new Date();
+                    var yyyy = Today.toLocaleDateString().slice(0, 4)
+                    var MM = (Today.getMonth() + 1 < 10 ? '0' : '') + (Today.getMonth() + 1);
+                    var dd = (Today.getDate() < 10 ? '0' : '') + Today.getDate();
+                    document.write(yyyy + "/" + MM + "/" + dd);</script>
+                <a id="clock">&nbsp;</a>
+            </h1>
+        </font>
+    </ul>
+</nav>
+<!-- /.navbar -->
+<!-- Content Wrapper. Contains page content -->
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card bg-dark text-white">
+                    <div class="card-header">
+                        <h1 align="center">生產進度看板</h1>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered display nowrap table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>工單編號</th>
+                                    <th>產品名稱</th>
+                                    <th>貨品編號</th>
+                                    <th>預計完工數量</th>
+                                    <th>預定完工日</th>
+                                    <th>途程1</th>
+                                    <th>途程2</th>
+                                    <th>途程3</th>
+                                    <th>途程4</th>
+                                    <th>途程5</th>
+                                    <th>途程6</th>
+                                    <th>途程7</th>
+                                    <th>途程8</th>
+                                    <th>途程9</th>
+                                    <th>途程10</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < @Model.JobListInPaging.Count(); i++)
+                                {
+                                    <tr id="collapsBtn" name="@Model.JobListInPaging[i].Job_no">
+                                        <td>@Model.JobListInPaging[i].Job_no</td>
+                                        <td>@Model.JobListInPaging[i].Item_name</td>
+                                        <td>@Model.JobListInPaging[i].Item_no</td>
+                                        <td>@Model.JobListInPaging[i].Scheduled_completion_quantity</td>
+                                        <td>@((Model.JobListInPaging[i].Scheduled_completion_date.HasValue) ? Model.JobListInPaging[i].Scheduled_completion_date.Value.Date.ToString("d") : "--")</td>
+                                        @for (int j = 0; j < 10; j++)
+                                        {
+                                            if (j < @Model.RoutingsList[i].Count())
+                                            {
+                                                var quan = 0;
+                                                foreach (OperationsSubmit a in Model.SubmitList.Where(x => x.Operations_submit_no.Contains(Model.RoutingsList[i][j].Routing_no)).ToList())
+                                                {
+                                                    quan += a.Actually_completion_quantity;
+                                                }
+
+                                                if (Model.SubmitList.Where(x => x.Operations_submit_no.Contains(Model.RoutingsList[i][j].Routing_no)).ToList().Count > 0)
+                                                {
+                                                    @if (Model.SubmitList.Where(x => x.Operations_submit_no.Contains(Model.RoutingsList[i][j].Routing_no)).ToList().Last().Actually_completion_date.ToString() == "")
+                                                    {
+                                                        <td style="background-color: #00F500;">
+                                                            <div>@Model.RoutingsList[i][j].Routing_name</div>
+                                                            <div>@quan</div>
+                                                        </td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>
+                                                            <div>@Model.RoutingsList[i][j].Routing_name</div>
+                                                            <div>@quan</div>
+                                                        </td>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <td>
+                                                        <div>@Model.RoutingsList[i][j].Routing_name</div>
+                                                        <div>@quan</div>
+                                                    </td>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <td />
+                                            }
+                                        }
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>工單編號</th>
+                                    <th>產品名稱</th>
+                                    <th>貨品編號</th>
+                                    <th>預計完工數量</th>
+                                    <th>預定完工日</th>
+                                    <th>途程1</th>
+                                    <th>途程2</th>
+                                    <th>途程3</th>
+                                    <th>途程4</th>
+                                    <th>途程5</th>
+                                    <th>途程6</th>
+                                    <th>途程7</th>
+                                    <th>途程8</th>
+                                    <th>途程9</th>
+                                    <th>途程10</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
+
+@section Scripts{
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/datatables.min.js"></script>
+
+    <script>
+    $(function myFunction() {
+            $("#example1").DataTable({
+                "searching": false,
+                "bLengthChange": false,
+                "scrollX": '100%',
+                "scrollXInner": "110%",
+                "order": [[4, "asc"]],
+                "responsive": false,
+                "autoWidth": false,
+                language: {
+                    "lengthMenu": "顯示 _MENU_ 筆資料",
+                    "sProcessing": "處理中...",
+                    "sZeroRecords": "没有匹配结果",
+                    "sInfo": "_START_ 至 _END_ / 共 _TOTAL_ 筆",
+                    "sInfoEmpty": "目前共有 0 筆紀錄",
+                    "sInfoFiltered": " ",
+                    "sInfoPostFix": "",
+                    "sSearch": "尋找:",
+                    "sUrl": "",
+                    "sEmptyTable": "尚未有資料紀錄存在",
+                    "sLoadingRecords": "載入資料中...",
+                    "sInfoThousands": ",",
+                    "oPaginate": {
+                        "sFirst": "首頁",
+                        "sPrevious": "上一頁",
+                        "sNext": "下一頁",
+                        "sLast": "末頁"
+                    },
+                },
+            });
+        });</script>
+    <script>
+    var d = new Date();
+
+        function updateClock() {
+            d.setTime(d.getTime() + 1000);
+
+            var currentHours = d.getHours();
+            var currentMinutes = d.getMinutes();
+            var currentSeconds = d.getSeconds();
+
+            currentHours = (currentHours < 10 ? "0" : "") + currentHours;
+            currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+            currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
+
+            currentHours = (currentHours > 12) ? currentHours : currentHours;
+            currentHours = (currentHours == 0) ? 12 : currentHours;
+
+            var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
+
+            document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+        }
+
+        window.onload = function () {
+            updateClock();
+            setInterval('updateClock()', 1000);
+        }</script>
+}
